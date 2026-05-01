@@ -7,31 +7,55 @@ import { ArrowUpRight } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
-const DEPLOYMENT_PATHWAYS = [
+const applications = [
     {
-        title: "Green Hydrogen Production",
-        desc: "Integrated stacks for refining, steel, and chemical feedstock.",
-        image: "/home/Green Hydrogen Production.jpg", // Keeping existing valid image
-        link: "/applications#production"
+        title: "Commercial and industrial rooftops",
+        desc: "Solar and storage solutions for factories, warehouses, and large commercial buildings.",
+        image: "/home/Green Hydrogen Production.jpg",
+        link: "/applications#commercial-rooftops"
     },
     {
-        title: "Ammonia & Derivative Value Chains",
-        desc: "Direct integration for massive-scale fertilizer and fuel synthesis.",
-        image: "/home/Green Ammonia.png", // Keeping existing valid image
-        link: "/applications#ammonia"
+        title: "Utility-scale solar plants",
+        desc: "High-output module supply and storage systems for solar farms and energy infrastructure projects.",
+        image: "/home/Green Ammonia.png",
+        link: "/applications#utility-solar"
     },
     {
-        title: "On-Site Industrial Supply",
-        desc: "Distributed generation eliminating cryogenic logistics costs.",
-        image: "https://images.unsplash.com/photo-1518709590660-4f5faa0ef881?auto=format&fit=crop&q=80", // More industrial
-        link: "/applications#distributed"
+        title: "Solar farms with battery storage",
+        desc: "Integrated solar-plus-storage systems for smoother generation and stronger grid support.",
+        image: "/home/Hybrid Energy Integration.png",
+        link: "/applications#solar-storage"
     },
     {
-        title: "Hybrid Energy Integration Environments",
-        desc: "Balancing mechanism for renewable-heavy grids and thermal assets.",
-        image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80", // Energy grid/Wind farm cinematic
-        link: "/applications#integration"
-    }
+        title: "Manufacturing facilities",
+        desc: "Reliable energy systems for industrial production, process load management and operational resilience.",
+        image: "https://images.unsplash.com/photo-1518709590660-4f5faa0ef881?auto=format&fit=crop&q=80",
+        link: "/applications#manufacturing"
+    },
+    {
+        title: "Data centers and high-load users",
+        desc: "Battery-backed generation for critical infrastructure, uptime assurance and demand-charge optimization.",
+        image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80",
+        link: "/applications#data-centers"
+    },
+    {
+        title: "Off-grid and weak-grid sites",
+        desc: "Deployable solar and storage platforms for remote locations and constrained power networks.",
+        image: "/home/On-Site Industrial Supply.png",
+        link: "/applications#off-grid"
+    },
+    {
+        title: "Renewable energy developers",
+        desc: "Project-ready modules and storage systems for EPCs, developers and independent power producers.",
+        image: "/home/Export-Linked Market Opportunities.jpg",
+        link: "/applications#developers"
+    },
+    {
+        title: "Peak shaving and demand-charge management",
+        desc: "Storage-enabled load shifting to lower operating costs and improve tariff economics.",
+        image: "/home/Proven Reliability.webp",
+        link: "/applications#peak-shaving"
+    },
 ];
 
 export default function Applications() {
@@ -45,7 +69,7 @@ export default function Applications() {
                         viewport={{ once: true }}
                         className="text-[36px] md:text-[52px] font-bold mb-6 leading-[1.15] text-brand-secondary"
                     >
-                        Deployment Pathways
+                        Applications
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
@@ -54,68 +78,15 @@ export default function Applications() {
                         transition={{ delay: 0.1 }}
                         className="text-xl text-brand-gray-600 font-light max-w-2xl leading-[1.75]"
                     >
-                        Gigacore systems are structured for massive-scale integration across critical industrial sectors.
+                        Gigacore Systems supports solar and storage deployment across multiple project types.
                     </motion.p>
                 </div>
 
-                {/* Horizontal Scrolling Carousel */}
                 <div className="relative w-full overflow-hidden">
                     <div className="flex w-max animate-[wave-scroll_50s_linear_infinite] hover:[animation-play-state:paused]">
-                        {/* Duplicate items for seamless infinite scroll (2 sets) */}
-                        {[...[
-                            {
-                                title: "Green Ammonia",
-                                desc: "Decarbonizing fertilizer production with scalable H2 feedstock.",
-                                link: "/applications#ammonia",
-                                image: "/home/Green Ammonia.png"
-                            },
-                            {
-                                title: "Industrial Supply",
-                                desc: "On-site generation replacing delivered bulk hydrogen logistics.",
-                                link: "/applications#industrial",
-                                image: "/home/On-Site Industrial Supply.png"
-                            },
-                            {
-                                title: "Hybrid Integration",
-                                desc: "Balancing renewable intermittency with baseload industrial demand.",
-                                link: "/applications#integration",
-                                image: "/home/Hybrid Energy Integration.png"
-                            },
-                            {
-                                title: "Modular Scaling",
-                                desc: "Flexible capacity expansion for growing industrial needs.",
-                                link: "/technology",
-                                image: "/home/ChatGPT Image Feb 16, 2026, 02_31_56 PM.png"
-                            }
-                        ], ...[
-                            {
-                                title: "Green Ammonia",
-                                desc: "Decarbonizing fertilizer production with scalable H2 feedstock.",
-                                link: "/applications#ammonia",
-                                image: "/home/Green Ammonia.png"
-                            },
-                            {
-                                title: "Industrial Supply",
-                                desc: "On-site generation replacing delivered bulk hydrogen logistics.",
-                                link: "/applications#industrial",
-                                image: "/home/On-Site Industrial Supply.png"
-                            },
-                            {
-                                title: "Hybrid Integration",
-                                desc: "Balancing renewable intermittency with baseload industrial demand.",
-                                link: "/applications#integration",
-                                image: "/home/Hybrid Energy Integration.png"
-                            },
-                            {
-                                title: "Modular Scaling",
-                                desc: "Flexible capacity expansion for growing industrial needs.",
-                                link: "/technology",
-                                image: "/home/ChatGPT Image Feb 16, 2026, 02_31_56 PM.png"
-                            }
-                        ]].map((app, idx) => (
+                        {applications.map((app, idx) => (
                             <Link href={app.link} key={idx} className="block group cursor-pointer flex-shrink-0 mx-4 w-[320px] md:w-[380px]">
                                 <div className="flex flex-col h-full bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-500">
-                                    {/* Image Container */}
                                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-50">
                                         <Image
                                             src={app.image}

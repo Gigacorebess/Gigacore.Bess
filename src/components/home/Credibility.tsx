@@ -17,56 +17,55 @@ export default function Credibility() {
                 >
                     <div className="mb-12 text-left max-w-3xl">
                         <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary tracking-tight mb-4">
-                            Industry Validated
+                            Battery Energy Storage Systems
                         </h2>
                         <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed">
-                            Trusted by industry leaders for mission-critical hydrogen deployment.
+                            Battery Energy Storage Systems allow businesses, developers and utilities to store electricity when it is available and discharge it when it is needed most.
                         </p>
                     </div>
                     <div className="relative w-full overflow-hidden">
                         <div className="flex w-max animate-[wave-scroll_40s_linear_infinite] hover:[animation-play-state:paused]">
-                            {/* Duplicate items for seamless infinite scroll (2 sets) */}
                             {[...[
                                 {
                                     src: "/home/Proven Reliability.webp",
-                                    alt: "Proven Reliability Track Record",
-                                    label: "Proven Reliability"
+                                    alt: "Utility-Scale BESS",
+                                    label: "Utility-Scale BESS"
                                 },
                                 {
                                     src: "/home/CREDIBILITY.png",
-                                    alt: "Verified Performance Data",
-                                    label: "Verified Performance"
+                                    alt: "Commercial & Industrial BESS",
+                                    label: "Commercial & Industrial BESS"
                                 },
                                 {
                                     src: "/home/Global Safety.png",
-                                    alt: "Global Safety Standards",
-                                    label: "Global Safety"
+                                    alt: "Solar + Storage Integration",
+                                    label: "Solar + Storage"
                                 },
                                 {
                                     src: "/home/Export-Linked Market Opportunities.jpg",
-                                    alt: "Export-Linked Market Opportunities",
-                                    label: "Market Opportunities"
+                                    alt: "Backup & Resilience",
+                                    label: "Backup & Resilience"
                                 }
                             ], ...[
                                 {
                                     src: "/home/Proven Reliability.webp",
-                                    alt: "Proven Reliability Track Record",
-                                    label: "Proven Reliability"
+                                    alt: "Utility-Scale BESS",
+                                    label: "Utility-Scale BESS"
                                 },
                                 {
                                     src: "/home/CREDIBILITY.png",
-                                    alt: "Verified Performance Data",
-                                    label: "Verified Performance"
+                                    alt: "Commercial & Industrial BESS",
+                                    label: "Commercial & Industrial BESS"
                                 },
                                 {
                                     src: "/home/Global Safety.png",
-                                    alt: "Global Safety Standards",
-                                    label: "Global Safety"
+                                    alt: "Solar + Storage Integration",
+                                    label: "Solar + Storage"
                                 },
                                 {
                                     src: "/home/Export-Linked Market Opportunities.jpg",
-                                    alt: "Export-Linked Market Opportunities",
-                                    label: "Market Opportunities"
+                                    alt: "Backup & Resilience",
+                                    label: "Backup & Resilience"
                                 }
                             ]].map((item, idx) => (
                                 <div
@@ -81,7 +80,6 @@ export default function Credibility() {
                                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                                             sizes="(max-width: 768px) 300px, 400px"
                                         />
-                                        {/* Gradient Overlay for Text Readability */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
                                         <div className="absolute bottom-4 left-4 right-4">
                                             <h3 className="text-white font-bold text-lg leading-tight">{item.label}</h3>

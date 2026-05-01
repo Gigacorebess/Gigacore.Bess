@@ -4,13 +4,13 @@ import React, { useState, useRef, useEffect } from "react";
 const INDUSTRIES = [
     "Data Centers",
     "Energy Storage & Sector Coupling",
-    "Green Ammonia",
+    "Solar + Storage Commercial Projects",
     "Green Steel",
     "Industrial Corridors & Clusters",
-    "Industrial Hydrogen Feedstock",
+    "Industrial Energy Infrastructure",
     "Marine & Heavy Transport",
     "Oil & Gas",
-    "On-Site & Distributed Hydrogen",
+    "Distributed Solar + Storage",
     "Refining & Petrochemicals",
     "Utilities & Grid Support",
     "Other"

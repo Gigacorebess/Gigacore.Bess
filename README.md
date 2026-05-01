@@ -1,52 +1,43 @@
-Gigacore Energy
+Gigacore Systems
 
-This repository contains internal and partner-facing materials related to Gigacore Energy Pvt Ltd, an India-based energy infrastructure platform working on advanced hydrogen production systems.
+This repository contains technical documentation, website content, and development materials related to Gigacore Systems, a global energy infrastructure platform focused on advanced battery energy storage systems and solar-plus-storage solutions.
 
 Purpose
 
 The repository is used to:
 
-Maintain technical documentation and references
-
-Support system design, modeling, and validation workflows
-
-Share non-sensitive materials with collaborators under defined access
-
-This is not a public product repository and does not represent commercial readiness.
+- Maintain technical documentation and product specifications
+- Support system design, engineering, and deployment workflows
+- Share materials with partners and collaborators under defined access
+- Manage website content and public-facing materials
 
 Scope
 
-Depending on access level, this repository may include:
+This repository includes:
 
-System architecture notes
-
-Simulation models and analysis scripts
-
-Documentation for pilots and demonstrations
-
-Website and technical content assets
-
-Internal tooling and utilities
+- Product documentation and technical specifications
+- Website code and content (Next.js/React)
+- System architecture and design references
+- Documentation for deployments and integrations
+- Website configuration and assets
 
 Important Notes
 
-Content may reference technologies at pilot or demonstration (pre-commercial) stages
-
-No information here constitutes performance guarantees, commercial terms, or investment offers
-
-Sensitive IP, control logic, and manufacturing details are intentionally excluded
+- Commercial BESS products and specifications are included for partner reference
+- No information here constitutes binding product guarantees or investment offers
+- All materials are subject to change as products evolve
+- Sensitive manufacturing details and proprietary designs are excluded
 
 Usage
 
 Materials are provided for:
 
-Internal development
-
-Technical evaluation
-
-Partner collaboration
+- Internal development and deployment
+- Partner collaboration and evaluation
+- Public website hosting and management
 
 Reuse, redistribution, or external disclosure requires explicit permission.
+
 
 Legal
 

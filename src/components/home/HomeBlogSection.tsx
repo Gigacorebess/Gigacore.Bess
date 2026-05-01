@@ -9,7 +9,6 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 import { blogPosts } from "@/data/blogPosts";
 
 export default function HomeBlogSection() {
-    // Get the latest 3 posts
     const latestPosts = blogPosts.slice(0, 3);
 
     return (
@@ -21,7 +20,6 @@ export default function HomeBlogSection() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                 >
-                    {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <motion.div variants={fadeUp} className="max-w-2xl">
                             <span className="text-[15px] font-bold tracking-widest text-brand-primary uppercase mb-3 block">
@@ -44,15 +42,13 @@ export default function HomeBlogSection() {
                         </motion.div>
                     </div>
 
-                    {/* Blog Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                        {latestPosts.map((post, idx) => (
+                        {latestPosts.map((post) => (
                             <motion.div
                                 key={post.slug}
                                 variants={fadeUp}
                                 className="group flex flex-col h-full"
                             >
-                                {/* Image Card */}
                                 <Link href={`/company/blog/${post.slug}`} className="block overflow-hidden rounded-2xl mb-6 relative aspect-[16/10]">
                                     {post.image ? (
                                         <div
@@ -66,26 +62,22 @@ export default function HomeBlogSection() {
                                     )}
                                 </Link>
 
-                                {/* Category Line */}
                                 <div className="border-t border-gray-200 pt-6 mb-4">
                                     <span className="text-[15px] font-bold text-gray-900 tracking-wide uppercase">
                                         {post.category}
                                     </span>
                                 </div>
 
-                                {/* Title */}
                                 <Link href={`/company/blog/${post.slug}`} className="block mb-4">
                                     <h3 className="text-2xl font-medium text-brand-primary leading-tight group-hover:text-brand-secondary transition-colors duration-300">
                                         {post.title}
                                     </h3>
                                 </Link>
 
-                                {/* Description */}
                                 <p className="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed flex-grow">
                                     {post.excerpt}
                                 </p>
 
-                                {/* Read More */}
                                 <div className="mt-auto">
                                     <Link
                                         href={`/company/blog/${post.slug}`}

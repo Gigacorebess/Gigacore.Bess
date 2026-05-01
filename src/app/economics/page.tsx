@@ -25,10 +25,10 @@ export default function EconomicsPage() {
                         className="max-w-4xl mx-auto flex flex-col items-center"
                     >
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
-                            Across all hydrogen production pathways, <span className="font-bold text-gray-900">electricity consumption</span> is the single largest determinant of cost.
+                            Across all solar and storage pathways, <span className="font-bold text-gray-900">electricity consumption</span> is the single largest determinant of cost.
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
-                            Conventional water electrolysis typically requires ~50 kWh of electricity per kilogram of hydrogen, which directly translates into high operating costs and sensitivity to power prices.
+                            Conventional solar-plus-storage systems are highly sensitive to electricity pricing and energy efficiency, which directly impacts operating costs and project viability.
                         </motion.p>
                     </motion.div>
                 </SectionWrapper>
@@ -45,7 +45,7 @@ export default function EconomicsPage() {
                 content={
                     <>
                         <p>
-                            For green hydrogen to compete with fossil-derived inputs, the Levelized Cost of Hydrogen (LCOH) must drop significantly. Currently, <strong>70-80% of the LCOH</strong> for electrolytic hydrogen is purely the cost of electricity.
+                            For solar-plus-storage to compete with conventional industrial power, the Levelized Cost of Energy must drop significantly. Currently, electricity accounts for the majority of system operating cost.
                         </p>
                         <p>
                             Even with free renewable energy, the capital cost (CAPEX) of electrolyzers and the low utilization rates of intermittent power sources make the economics challenging.
@@ -99,13 +99,13 @@ export default function EconomicsPage() {
                 content={
                     <>
                         <p>
-                            Gigacore addresses the root cause of high LCOH by fundamentally reducing the energy required to split water.
+                            Gigacore addresses the root cause of high energy cost by fundamentally improving system-level efficiency for solar-plus-storage.
                         </p>
                         <p className="border-l-4 border-brand-primary pl-4 py-2 font-medium text-brand-secondary">
-                            By bypassing the thermodynamic barriers of conventional electrolysis, our platform targets a production consumption of <strong>&lt; 40 kWh/kg</strong>.
+                            By optimizing energy delivery and storage integration, our platform targets a total system consumption equivalent to under <strong>40 kWh/kg</strong> benchmark levels.
                         </p>
                         <p>
-                            This 20% reduction in energy intensity effectively decouples hydrogen production from peak power volatility.
+                            This efficiency improvement helps decouple project economics from grid volatility and peak power pricing.
                         </p>
                     </>
                 }

@@ -6,23 +6,23 @@ import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp } from "@/lib/motion";
 import { Plus, Minus } from "lucide-react";
 
-const OPERATIONAL_BENEFITS = [
+const BENEFITS = [
     {
-        title: "Continuous Operation",
-        description: "Systems designed for 24/7 industrial duty cycles without frequent stack degradation. Our proprietary thermal management ensures consistent output even under variable load conditions."
+        title: "Global Technology Access",
+        description: "Solar and storage platforms from established international manufacturers.",
     },
     {
-        title: "Maintainable Modular Expansion",
-        description: "Cluster-based architecture allows for capacity scaling without plant shutdowns. individual reactor modules can be serviced or swapped while the rest of the array maintains production."
+        title: "India Market Focus",
+        description: "Solutions designed for Indian tariffs, solar conditions, grid constraints and industrial energy needs.",
     },
     {
-        title: "Simplified Balance-of-Plant",
-        description: "Reduced auxiliary complexity through atmospheric pressure operation. Eliminates the need for high-maintenance compressors and complex membrane management systems within the generation loop."
+        title: "Integrated Approach",
+        description: "Solar, storage, controls, power conversion and project planning considered together.",
     },
     {
-        title: "Deployment-Ready Configuration",
-        description: "Skid-mounted systems pre-integrated for rapid site installation. Reduces on-site engineering requirements and accelerates time-to-production for industrial off-takers."
-    }
+        title: "Execution-Oriented",
+        description: "Focused on practical project development, vendor coordination and deployment readiness.",
+    },
 ];
 
 export default function Differentiators() {
@@ -38,8 +38,8 @@ export default function Differentiators() {
                         viewport={{ once: true }}
                         className="text-[length:var(--font-h1)] font-bold mb-8 leading-[1.0] tracking-tight"
                     >
-                        <span className="text-white">Industrial Reliability.</span><br />
-                        <span className="text-brand-primary">Engineered for Uptime.</span>
+                        <span className="text-white">Why Gigacore Systems.</span><br />
+                        <span className="text-brand-primary">Built for Deployment.</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
@@ -48,14 +48,13 @@ export default function Differentiators() {
                         transition={{ delay: 0.1 }}
                         className="text-[length:var(--font-intro)] text-white font-light max-w-2xl leading-[1.75]"
                     >
-                        Industrial systems require predictable performance. Gigacore’s architecture is engineered for reliability, redundancy, and scale - delivering consistent output in the harshest environments.
+                        We combine global product access, India-focused project understanding and practical execution support. Our role is to help customers evaluate the right technology, structure the right system and move quickly from discussion to implementation.
                     </motion.p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-                    {/* Left Side - Accordion */}
                     <div className="space-y-0 border-t border-white/20">
-                        {OPERATIONAL_BENEFITS.map((item, idx) => (
+                        {BENEFITS.map((item, idx) => (
                             <motion.div
                                 key={idx}
                                 initial={{ opacity: 0, y: 10 }}
@@ -71,7 +70,6 @@ export default function Differentiators() {
                                     <span className={`text-[length:var(--font-h3)] font-bold transition-colors ${openIndex === idx ? 'text-brand-primary' : 'text-white group-hover:text-brand-primary'}`}>
                                         {item.title}
                                     </span>
-                                    {/* Bloom-style minimal toggle */}
                                     <span className={`flex items-center justify-center w-8 h-8 transition-colors ${openIndex === idx ? 'text-brand-primary' : 'text-white/50 group-hover:text-brand-primary'}`}>
                                         {openIndex === idx ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
                                     </span>
@@ -95,7 +93,6 @@ export default function Differentiators() {
                         ))}
                     </div>
 
-                    {/* Right Side - Industrial Image (Build.jpg) */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -105,7 +102,7 @@ export default function Differentiators() {
                     >
                         <Image
                             src="/home/build.png"
-                            alt="Industrial Hydrogen Infrastructure Construction"
+                            alt="Industrial solar and battery energy installation"
                             fill
                             className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-700"
                             sizes="(max-width: 1024px) 100vw, 50vw"

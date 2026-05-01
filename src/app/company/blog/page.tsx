@@ -75,7 +75,7 @@ export default function BlogPage() {
                                 className="space-y-4 max-w-[480px]"
                             >
                                 <p className="text-[17px] text-gray-300 leading-[1.7]">
-                                    Rigorous perspectives on green hydrogen, next gen hydrogen technology, and the hard
+                                    Rigorous perspectives on solar and storage, next gen energy systems, and the hard
                                     economics of industrial decarbonisation - written for engineers, investors, and
                                     decision-makers.
                                 </p>

@@ -10,11 +10,10 @@ import Image from "next/image";
 export default function CallToAction() {
     return (
         <section className="relative py-[var(--spacing-section)] overflow-hidden bg-brand-secondary border-t border-white/10">
-            {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/home/build.png"
-                    alt="Industrial Facility Background"
+                    alt="Solar and battery energy storage background"
                     fill
                     className="object-cover opacity-20"
                 />
@@ -31,13 +30,13 @@ export default function CallToAction() {
                             viewport={{ once: true }}
                         >
                             <span className="text-brand-primary font-bold tracking-widest uppercase text-[15px] mb-4 block">
-                                Scale with Us
+                                Build with Us
                             </span>
                             <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 tracking-tight leading-[1.1]">
-                                Engage with Gigacore
+                                Build your next solar + storage project with Gigacore Systems.
                             </h2>
                             <p className="text-[length:var(--font-intro)] text-gray-300 mb-0 leading-relaxed font-light">
-                                For organizations evaluating industrial hydrogen systems, our team welcomes a structured technical discussion.
+                                Speak with us about BESS, solar modules, solar-plus-storage systems or project-specific energy requirements.
                             </p>
                         </motion.div>
                     </div>
@@ -55,7 +54,7 @@ export default function CallToAction() {
                             href="/contact"
                             className="!bg-brand-primary !text-brand-secondary font-bold hover:!bg-white hover:!text-brand-secondary transition-all duration-300 w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-[0_0_20px_rgba(0,213,99,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
                         >
-                            Request Technical Overview
+                            Contact Gigacore Systems
                         </Button>
                     </motion.div>
                 </div>

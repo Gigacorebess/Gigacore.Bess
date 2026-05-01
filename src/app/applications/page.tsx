@@ -47,7 +47,7 @@ export default function ApplicationsPage() {
                         transition={{ duration: 0.5 }}
                         className="text-brand-primary text-[13px] font-bold tracking-widest uppercase mb-6 block"
                     >
-                        Hydrogen Applications
+                        Solar & Storage Applications
                     </motion.span>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function ApplicationsPage() {
                         transition={{ duration: 0.8 }}
                         className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
                     >
-                        Hydrogen Where It Is{" "}
+                        Solar & Storage Where It Is{" "}
                         <span className="text-brand-primary">Actually Used</span>
                     </motion.h1>
                 </SectionWrapper>
@@ -72,12 +72,12 @@ export default function ApplicationsPage() {
                         className="max-w-4xl mx-auto flex flex-col items-center"
                     >
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
-                            The platform is designed for applications where hydrogen demand already exists at scale - where cost, reliability, and integration determine adoption.
+                            The platform is designed for applications where solar and storage demand already exists at scale - where cost, reliability, and integration determine adoption.
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
                             Rather than targeting speculative or niche use cases, deployment is focused on{" "}
                             <span className="text-brand-primary font-bold">industrial and infrastructure sectors</span>{" "}
-                            with continuous hydrogen consumption and clear economic drivers.
+                            with continuous solar and storage demand and clear economic drivers.
                         </motion.p>
                     </motion.div>
                 </SectionWrapper>
@@ -108,7 +108,7 @@ export default function ApplicationsPage() {
                                 <p>
                                     Access to reliable power is becoming the primary limitation for new data center development. As AI workloads increase power intensity, grid availability is reshaping site selection and expansion timelines.
                                 </p>
-                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Hydrogen-Based Onsite Generation Enables</h4>
+                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Solar + Storage Onsite Generation Enables</h4>
                                 <ul className="space-y-1">
                                     {[
                                         "Faster time to power deployment",
@@ -118,7 +118,7 @@ export default function ApplicationsPage() {
                                     ].map((item, i) => <CheckItem key={i} text={item} />)}
                                 </ul>
                                 <p className="text-[15px] text-gray-600 leading-relaxed pt-2">
-                                    Hydrogen-integrated power systems can support baseload and backup power, microgrid integration, and combined heat and power (CHP) systems.
+                                    Integrated solar and storage systems can support baseload and backup power, microgrid integration, and combined heat and power (CHP) systems.
                                 </p>
                             </div>
                         </motion.div>
@@ -130,26 +130,26 @@ export default function ApplicationsPage() {
                 ESTABLISHED INDUSTRIAL APPLICATIONS
             ═══════════════════════════════════════════════════════════ */}
 
-            {/* ── 4. Industrial Hydrogen Feedstock ─────────────────────── */}
+            {/* ── 4. Industrial Energy Infrastructure ─────────────────────── */}
             <SplitSection
                 theme="gray"
                 imagePosition="right"
-                imageSrc="/application/Hydrogen is a core input for multiple industrial processes..jpg"
+                imageSrc="/application/Industrial%20Energy%20Infrastructure.jpg"
                 imageAlt="Industrial Feedstock"
                 subtitle="Core Industrial Input"
-                title="Industrial Hydrogen Feedstock"
+                title="Industrial Energy Infrastructure"
                 content={
                     <>
                         <p className="mb-6">
-                            Hydrogen is a foundational input across refining, chemicals, steel, and heavy industry. Replacing fossil-derived hydrogen requires continuous, industrial-grade systems operating at competitive cost.
+                            Solar and storage are foundational energy assets for refining, chemicals, steel, and heavy industry. Replacing fossil-derived power requires continuous, industrial-grade systems operating at competitive cost.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Applicable Use Cases</h4>
                         <ul className="space-y-1 mb-6">
                             {[
                                 "Chemical & petrochemical feedstock",
-                                "Process hydrogen for manufacturing",
-                                "Replacement of captive grey hydrogen systems",
-                                "Integration with existing hydrogen infrastructure",
+                                "Manage industrial power and storage",
+                                "Replacement of captive diesel and gas peaker systems",
+                                "Integration with existing energy infrastructure",
                             ].map((item, i) => <CheckItem key={i} text={item} />)}
                         </ul>
                         <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
@@ -172,18 +172,18 @@ export default function ApplicationsPage() {
                     content={
                         <>
                             <p className="mb-6">
-                                Ammonia remains one of the largest global hydrogen sinks and a cornerstone of fertilizer production and emerging energy export markets.
+                                Ammonia production remains one of the largest global industrial energy consumers and a cornerstone of fertilizer production and emerging energy export markets.
                             </p>
                             <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Platform Capabilities</h4>
                             <ul className="space-y-1 mb-6">
                                 {[
-                                    "Cost-competitive hydrogen supply",
+                                    "Cost-competitive energy supply",
                                     "Continuous, baseload operation",
                                     "Integration with large ammonia synthesis plants",
                                 ].map((item, i) => <CheckItem key={i} text={item} />)}
                             </ul>
                             <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
-                                Competitive hydrogen economics enable decarbonization without disrupting plant margins.
+                                Competitive solar + storage economics enable decarbonization without disrupting plant margins.
                             </p>
                         </>
                     }
@@ -204,7 +204,7 @@ export default function ApplicationsPage() {
                             <p className="mb-6">
                                 Steelmaking is structurally difficult to decarbonize due to high energy demand and metallurgical constraints.
                             </p>
-                            <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Hydrogen Enables</h4>
+                            <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Solar + Storage Enables</h4>
                             <ul className="space-y-1 mb-6">
                                 {[
                                     "Direct Reduced Iron (DRI) pathways",
@@ -233,13 +233,13 @@ export default function ApplicationsPage() {
                     content={
                         <>
                             <p className="mb-6">
-                                Refineries are natural early adopters due to constant hydrogen demand and existing process integration.
+                                Refineries are natural early adopters due to constant industrial energy demand and existing process integration.
                             </p>
                             <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Deployment Models</h4>
                             <ul className="space-y-1 mb-6">
                                 {[
-                                    "On-site hydrogen generation",
-                                    "Partial grey hydrogen replacement",
+                                    "On-site energy generation",
+                                    "Partial fossil fuel replacement",
                                     "Renewable integration for emissions reduction",
                                 ].map((item, i) => <CheckItem key={i} text={item} />)}
                             </ul>
@@ -276,9 +276,9 @@ export default function ApplicationsPage() {
                             <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold mb-8 tracking-tight leading-[1.1] text-[#001F1B]">Utilities &amp; Grid Support</h2>
                             <div className="text-lg text-gray-700 space-y-4">
                                 <p>
-                                    Rising electricity demand and decarbonization targets are straining grid infrastructure. Hydrogen systems provide a modular, scalable augmentation layer.
+                                    Rising electricity demand and decarbonization targets are straining grid infrastructure. Solar + storage systems provide a modular, scalable augmentation layer.
                                 </p>
-                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Hydrogen Systems Can Support</h4>
+                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Solar + Storage Systems Can Support</h4>
                                 <ul className="space-y-1">
                                     {[
                                         "Peak load management",
@@ -319,9 +319,9 @@ export default function ApplicationsPage() {
                             <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold mb-8 tracking-tight leading-[1.1] text-[#001F1B]">Oil & Gas</h2>
                             <div className="text-lg text-gray-700 space-y-4">
                                 <p>
-                                    Oil & gas operators face growing pressure to reduce emissions while maintaining operational reliability. Hydrogen provides a viable pathway that integrates with existing infrastructure.
+                                    Oil & gas operators face growing pressure to reduce emissions while maintaining operational reliability. Solar + storage provides a viable pathway that integrates with existing infrastructure.
                                 </p>
-                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Hydrogen Solutions Enable</h4>
+                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Solar + Storage Solutions Enable</h4>
                                 <ul className="space-y-1">
                                     {[
                                         "Low-emission onsite power",
@@ -364,9 +364,9 @@ export default function ApplicationsPage() {
                             <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold mb-8 tracking-tight leading-[1.1] text-[#001F1B]">Marine &amp; Heavy Transport</h2>
                             <div className="text-lg text-gray-700 space-y-4">
                                 <p>
-                                    Maritime regulations are accelerating the transition away from diesel-based onboard systems. Hydrogen offers a clean, modular alternative suited to marine environments.
+                                    Maritime regulations are accelerating the transition away from diesel-based onboard systems. Solar + storage offers a clean, modular alternative suited to marine environments.
                                 </p>
-                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Hydrogen Supports</h4>
+                                <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-brand-primary pt-2">Solar + Storage Supports</h4>
                                 <ul className="space-y-1">
                                     {[
                                         "Auxiliary vessel power",
@@ -384,19 +384,19 @@ export default function ApplicationsPage() {
                 </SectionWrapper>
             </section>
 
-            {/* ── 11. On-Site & Distributed Hydrogen ───────────────────── */}
+            {/* ── 11. On-Site & Distributed Energy ───────────────────── */}
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/application/On-Site%20%26%20Distributed%20Hydrogen.jpg"
-                imageAlt="Distributed Hydrogen"
+                imageSrc="/application/On-Site%20%26%20Distributed%20Energy.jpg"
+                imageAlt="Distributed Energy"
                 unoptimized
                 subtitle="Logistics Optimization"
-                title="On-Site & Distributed Hydrogen"
+                title="On-Site & Distributed Energy"
                 content={
                     <>
                         <p className="mb-6">
-                            Transport, storage, and compression significantly increase hydrogen cost and complexity. On-site generation eliminates these layers.
+                            Transport, storage, and compression significantly increase energy logistics cost and complexity. On-site generation eliminates these layers.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">On-Site Generation Provides</h4>
                         <ul className="space-y-1">
@@ -420,17 +420,17 @@ export default function ApplicationsPage() {
                 imagePosition="right"
                 imageSrc="/application/Energy%20Storage%20and%20Conversion%20Pathways.jpg"
                 imageAlt="Energy Storage"
-                subtitle="Hydrogen as Energy Carrier"
+                subtitle="Storage as Energy Carrier"
                 title="Energy Storage & Sector Coupling"
                 content={
                     <>
                         <p className="mb-6">
-                            Hydrogen enables long-duration energy storage and sector integration - bridging renewable generation with industrial and power demand.
+                            Solar + storage enables long-duration energy shift and sector integration - bridging renewable generation with industrial and power demand.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Relevant Pathways</h4>
                         <ul className="space-y-1">
                             {[
-                                "H₂-to-ammonia conversion",
+                                "Ammonia conversion pathways",
                                 "Industrial heat substitution",
                                 "Hybrid renewable integration",
                                 "Carbon capture compatibility",
@@ -454,12 +454,12 @@ export default function ApplicationsPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            India presents a unique combination of large and growing hydrogen demand, acute cost sensitivity, and strong policy-driven decarbonization momentum.
+                            India presents a unique combination of large and growing solar and storage demand, acute cost sensitivity, and strong policy-driven decarbonization momentum.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">India Offers</h4>
                         <ul className="space-y-1 mb-6">
                             {[
-                                "High existing hydrogen demand",
+                                "High existing solar and storage demand",
                                 "Strong cost sensitivity across industry",
                                 "Policy-driven decarbonization momentum",
                             ].map((item, i) => <CheckItem key={i} text={item} />)}
@@ -473,7 +473,7 @@ export default function ApplicationsPage() {
                             ))}
                         </div>
                         <p className="mt-5 text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
-                            Deployment targets regions where hydrogen demand already exists and cost parity drives adoption.
+                            Deployment targets regions where solar and storage demand already exists and cost parity drives adoption.
                         </p>
                     </>
                 }
@@ -503,7 +503,7 @@ export default function ApplicationsPage() {
                         </ul>
                         <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Target Markets</h4>
                         <div className="flex flex-wrap gap-2">
-                            {["Export Hydrogen Hubs", "Industrial Decarbonization Zones", "Manufacturing Clusters", "AI-Driven Data Center Regions"].map((s) => (
+                            {["Export Renewable Hubs", "Industrial Decarbonization Zones", "Manufacturing Clusters", "AI-Driven Data Center Regions"].map((s) => (
                                 <span key={s} className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">
                                     {s}
                                 </span>
@@ -531,11 +531,11 @@ export default function ApplicationsPage() {
                             <span className="text-brand-primary">Deployment Strategy</span>
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[15px] text-white/70 mb-14 max-w-2xl mx-auto leading-relaxed">
-                            Deployment is prioritized where hydrogen demand already exists, cost sensitivity is high, and scale can be achieved through industrial partnerships.
+                            Deployment is prioritized where solar and storage demand already exists, cost sensitivity is high, and scale can be achieved through industrial partnerships.
                         </motion.p>
                         <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {[
-                                { icon: Beaker, title: "Existing Demand", desc: "Replacement of grey hydrogen users" },
+                                { icon: Beaker, title: "Existing Demand", desc: "Replacement of high-cost power users" },
                                 { icon: Server, title: "Power Constraints", desc: "Where grid access limits expansion" },
                                 { icon: TrendingUp, title: "High Cost Sensitivity", desc: "Industries where OPEX dominates decisions" },
                                 { icon: Factory, title: "Industrial Scale", desc: "Partnership-driven large-volume consumption" },

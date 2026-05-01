@@ -90,7 +90,7 @@ export default function SimpleMetrics() {
                     {/* Title */}
                     <div className="mb-12 border-b border-gray-200 pb-4">
                         <h2 className="text-[20px] lg:text-[24px] tracking-tight">
-                            <span className="text-brand-secondary font-medium">Next Gen Hydrogen Reactor Technology - </span><span className="text-brand-primary font-bold">Green Hydrogen Production</span>
+                            <span className="text-brand-secondary font-medium">Next Gen Solar & Storage Performance - </span><span className="text-brand-primary font-bold">Industrial Energy Delivery</span>
                         </h2>
                     </div>
 
@@ -120,8 +120,8 @@ export default function SimpleMetrics() {
                                 <AnimatedNumber value={38} suffix="" suffix2="kWh/kg" />
                             </div>
                             <div className="space-y-1 text-gray-800 font-medium text-[15px]">
-                                <p>Target LCOH $2.75/kg (pilot-stage)</p>
-                                <p>Proprietary next-gen electrochemical reactor</p>
+                                <p>Target system cost parity with industrial power</p>
+                                <p>Proprietary integrated solar-plus-storage architecture</p>
                                 <p>No precious metals. Near-ambient operation</p>
                             </div>
                         </div>

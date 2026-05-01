@@ -49,7 +49,7 @@ export default function IndiaFirst() {
                             Built for <span className="text-gradient-green-glow font-bold">India's Scale</span> - Relevant Worldwide
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-gray-600 text-[15px] sm:text-[16px] mb-8 leading-relaxed">
-                            India represents one of the world’s most demanding hydrogen markets: price-sensitive, scale-intensive, and policy-driven.
+                            India represents one of the world’s most demanding energy markets: price-sensitive, scale-intensive, and policy-driven.
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="space-y-8">
@@ -74,7 +74,7 @@ export default function IndiaFirst() {
                             <div className="pl-6 border-l-2 border-gray-200">
                                 <h4 className="font-bold text-xl mb-3 text-gray-400">Global Relevance</h4>
                                 <p className="text-gray-500 text-sm leading-relaxed">
-                                    At the same time, the underlying economics and architecture are applicable to global industrial markets seeking cost-competitive green hydrogen.
+                                    At the same time, the underlying economics and architecture are applicable to global industrial markets seeking cost-competitive solar and storage solutions.
                                 </p>
                             </div>
                         </motion.div>

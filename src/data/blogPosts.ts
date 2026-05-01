@@ -15,7 +15,7 @@ export interface BlogPost {
 
 export const BLOG_CATEGORIES = [
     "All",
-    "Hydrogen Technology",
+    "Solar & Storage Technology",
     "Industrial Deployment",
     "Sustainability",
     "Market Insights",
@@ -27,312 +27,312 @@ export const BLOG_CATEGORIES = [
 
 export const blogPosts: BlogPost[] = [
     {
-        slug: "next-generation-hydrogen-electrolysis-industrial-scale",
-        title: "Next-Generation Hydrogen Electrolysis at Industrial Scale",
+        slug: "solar-plus-storage-scale-up-strategies",
+        title: "Solar + Storage Scale-Up Strategies for India",
         excerpt:
-            "How advanced electrolysis architectures are reshaping the economics of green hydrogen for heavy industry, and what it means for the global energy transition.",
-        category: "Hydrogen Technology",
+            "How integrated solar and battery systems can deliver reliable power, stabilize grids and support industrial growth across India.",
+        category: "Solar & Storage Technology",
         date: "January 28, 2026",
-        image: "/blog/hydrogen-electrolysis.png",
+        image: "/blog/solar-storage-scale-up.png",
         featured: true,
         content: [
             {
                 type: "paragraph",
-                text: "The hydrogen economy has long been discussed as a pillar of the clean energy future. Yet for decades, the cost of producing green hydrogen has remained a significant barrier to widespread adoption. Traditional electrolysis systems, while proven, face fundamental limitations in efficiency and scalability that keep hydrogen prices above competitive thresholds for most industrial applications.",
+                text: "Integrated solar and battery storage systems are reshaping how developers and energy users approach clean power. By combining high-performance PV modules with reliable LFP storage platforms, projects can balance generation and demand more effectively.",
             },
             {
                 type: "heading",
-                text: "The Efficiency Challenge",
+                text: "The Value of Hybrid Systems",
             },
             {
                 type: "paragraph",
-                text: "Conventional alkaline and PEM electrolyzers typically operate at system efficiencies between 60-70%. While incremental improvements continue, the thermodynamic constraints of these approaches suggest diminishing returns. The industry needs a paradigm shift rather than optimization of existing methods.",
+                text: "Hybrid systems reduce reliance on intermittent power by storing excess solar energy and releasing it during peak demand. This creates opportunities for peak shaving, demand-charge reduction and better utilization of renewable generation.",
             },
             {
                 type: "heading",
-                text: "A New Approach to Molecular Separation",
+                text: "Deployment Best Practices",
             },
             {
                 type: "paragraph",
-                text: "Emerging technologies are exploring alternative physical mechanisms for hydrogen separation that bypass traditional electrochemical limitations. By delivering energy more precisely at the molecular level, these systems can potentially achieve higher effective efficiencies while operating at moderate conditions.",
+                text: "Successful deployment depends on careful technology selection, system sizing and grid integration. The right combination of solar modules, battery chemistry and inverter controls can simplify operations and improve lifetime performance.",
             },
             {
                 type: "list",
                 items: [
-                    "Precision energy delivery reduces parasitic losses",
-                    "Moderate operating temperatures extend component lifetimes",
-                    "Distributed architectures enable flexible scaling",
-                    "Reduced balance-of-plant complexity lowers capital costs",
+                    "High-efficiency solar modules for stronger generation",
+                    "LFP energy storage for reliable discharge profiles",
+                    "System-level design for smooth charge/discharge cycles",
+                    "Project controls that optimize energy use and economics",
                 ],
             },
             {
                 type: "heading",
-                text: "Industrial Implications",
+                text: "Project Outcomes",
             },
             {
                 type: "paragraph",
-                text: "For industrial consumers of hydrogen, the implications are substantial. Lower production costs directly translate to improved process economics across fertilizer production, refining operations, and metals processing. The ability to produce hydrogen at or near the point of use eliminates costly transportation and storage infrastructure.",
-            },
-            {
-                type: "paragraph",
-                text: "As these technologies mature and move from laboratory demonstration to commercial deployment, the economics of green hydrogen are poised for a fundamental shift. Companies that position themselves early in this transition stand to capture significant value in the emerging hydrogen economy.",
+                text: "For commercial and industrial customers, hybrid solar-plus-storage systems can improve resilience, reduce energy costs and support sustainability targets while strengthening local grid flexibility.",
             },
         ],
     },
     {
-        slug: "decarbonizing-heavy-industry-hydrogen-pathway",
-        title: "Decarbonizing Heavy Industry: The Hydrogen Pathway",
+        slug: "solar-storage-growth-in-manufacturing",
+        title: "Solar + Storage Growth in Manufacturing Facilities",
         excerpt:
-            "Heavy industry accounts for nearly 30% of global emissions. Exploring how hydrogen serves as a critical decarbonization vector for sectors that cannot easily electrify.",
+            "Why manufacturing sites and large industrial campuses are turning to combined solar and battery solutions for energy resilience and cost control.",
         category: "Industrial Deployment",
         date: "January 15, 2026",
-        image: "/blog/heavy-industry.png",
+        image: "/blog/manufacturing-solar-storage.png",
         content: [
             {
                 type: "paragraph",
-                text: "Heavy industry represents one of the most challenging sectors to decarbonize. Steel, cement, chemicals, and refining operations require high-temperature heat and chemical feedstocks that cannot be easily replaced by direct electrification. This is where hydrogen emerges as an indispensable solution.",
+                text: "Manufacturing facilities face rising energy costs, demand charges and the need for reliable uptime. Solar generation paired with battery storage enables these sites to manage peak loads and provide backup during grid interruptions.",
             },
             {
                 type: "heading",
-                text: "Why Electrification Alone Is Not Enough",
+                text: "Reducing Demand Charges",
             },
             {
                 type: "paragraph",
-                text: "While electrification has made remarkable progress in transportation and buildings, industrial processes often require temperatures exceeding 1000 degrees Celsius or use hydrogen as a chemical reagent. Battery-powered furnaces and electric arc solutions address only a fraction of industrial energy demand.",
+                text: "Battery storage can shift consumption away from high-tariff periods, lowering demand charges and improving overall operational margins for energy-intensive industries.",
             },
             {
                 type: "heading",
-                text: "Hydrogen as Industrial Feedstock",
+                text: "Supporting Continuous Operation",
             },
             {
                 type: "paragraph",
-                text: "Beyond energy, hydrogen serves as a fundamental chemical input. Ammonia production for fertilizers, methanol synthesis, and petroleum refining all depend on large volumes of hydrogen. Replacing gray hydrogen with green alternatives in these existing applications represents an immediate decarbonization opportunity.",
+                text: "By pairing solar with storage, facilities can maintain critical loads during grid instability while also capturing daytime solar energy for later use.",
             },
             {
                 type: "heading",
-                text: "The Path Forward",
+                text: "The Implementation Path",
             },
             {
                 type: "paragraph",
-                text: "Successful industrial decarbonization through hydrogen requires three elements: cost-competitive production, reliable supply infrastructure, and seamless integration with existing processes. Companies developing next-generation hydrogen technologies are working to address all three simultaneously.",
+                text: "A successful project begins with load profiling, solar resource assessment, and an integrated design that balances generation, storage capacity and controls.",
             },
         ],
     },
     {
-        slug: "green-hydrogen-economics-reaching-cost-parity",
-        title: "Green Hydrogen Economics: Reaching Cost Parity",
+        slug: "solar-module-market-innovation-2026",
+        title: "Solar Module Market Innovation in 2026",
         excerpt:
-            "An analysis of the cost trajectories for green hydrogen production and the technological breakthroughs needed to achieve parity with fossil-derived hydrogen.",
+            "A look at the latest module technologies driving higher efficiency, greater reliability and lower levelized energy costs.",
         category: "Market Insights",
         date: "December 20, 2025",
-        image: "/blog/economics-parity.png",
+        image: "/blog/solar-module-innovation.png",
         content: [
             {
                 type: "paragraph",
-                text: "The economics of green hydrogen have improved dramatically over the past decade, driven by falling renewable energy costs and advances in electrolyzer technology. However, a significant gap remains between green hydrogen and conventional steam methane reforming production costs.",
+                text: "The solar module market continues to evolve rapidly, with new module architectures delivering better performance and resilience in diverse project environments.",
             },
             {
                 type: "heading",
-                text: "Current Cost Landscape",
+                text: "High-Power Module Trends",
             },
             {
                 type: "paragraph",
-                text: "Gray hydrogen produced from natural gas currently costs between 1 and 2 dollars per kilogram in most markets. Green hydrogen, produced through electrolysis powered by renewable energy, typically ranges from 4 to 7 dollars per kilogram depending on location and scale.",
+                text: "Manufacturers are pushing module power ratings higher while improving temperature coefficients and bifacial output for utility-scale and rooftop applications.",
             },
             {
                 type: "heading",
-                text: "Pathways to Cost Reduction",
+                text: "Performance in Challenging Conditions",
+            },
+            {
+                type: "paragraph",
+                text: "Dust-resistant, anti-reflective and bifacial modules are proving valuable in demanding climates, helping projects maintain energy yield over long duty cycles.",
             },
             {
                 type: "list",
                 items: [
-                    "Next-generation electrolyzer designs with higher efficiency",
-                    "Scale manufacturing to reduce capital costs per unit",
-                    "Optimized renewable energy integration and capacity factors",
-                    "Reduced balance-of-plant requirements through system simplification",
+                    "JA Solar high-performance modules",
+                    "Trina Solar Vertex series for utility deployments",
+                    "JinkoSolar bifacial and anti-dust platforms",
+                    "TOPCon modules for higher efficiency generation",
                 ],
             },
             {
                 type: "paragraph",
-                text: "Achieving cost parity is not merely a matter of incremental improvement. It requires fundamental rethinking of how we produce hydrogen, moving beyond optimization of legacy technologies toward genuinely novel approaches that change the cost equation at its foundation.",
+                text: "Optimizing module selection is a critical step for developers and EPCs who want to balance initial capital and long-term energy productivity.",
             },
         ],
     },
     {
-        slug: "role-of-hydrogen-in-global-energy-transition",
-        title: "The Role of Hydrogen in the Global Energy Transition",
+        slug: "policy-frameworks-for-solar-storage",
+        title: "Policy Frameworks for Solar + Storage Adoption",
         excerpt:
-            "Examining hydrogen's position in the evolving global energy landscape and the policy frameworks accelerating its adoption across major economies.",
+            "Examining how emerging regulations and incentives can accelerate commercial and utility-scale solar-plus-storage deployment.",
         category: "Policy & Regulation",
         date: "December 5, 2025",
-        image: "/blog/energy-transition.png",
+        image: "/blog/policy-solar-storage.png",
         content: [
             {
                 type: "paragraph",
-                text: "Governments around the world are increasingly recognizing hydrogen as a critical component of their energy transition strategies. National hydrogen strategies have been published by over 30 countries, committing hundreds of billions of dollars in public and private investment.",
+                text: "Regulatory support is essential for scaling solar and storage projects. Clear frameworks, tariffs and grid interconnection rules help unlock investment and reduce deployment risk.",
             },
             {
                 type: "heading",
-                text: "Global Policy Momentum",
+                text: "Market Signals and Incentives",
             },
             {
                 type: "paragraph",
-                text: "The momentum behind hydrogen policy is unprecedented. Major economies including the EU, United States, China, India, Japan, and Australia have all established ambitious hydrogen targets with supporting regulatory frameworks and financial incentives.",
+                text: "Incentives for renewable energy plus storage can improve project bankability while encouraging flexible, grid-supportive installations.",
             },
             {
                 type: "heading",
-                text: "Industrial Strategy Alignment",
+                text: "Aligning Infrastructure Goals",
             },
             {
                 type: "paragraph",
-                text: "Importantly, hydrogen strategies are increasingly integrated with broader industrial policy. Governments recognize that domestic hydrogen production capability is both an energy security imperative and an economic development opportunity.",
+                text: "Policies that integrate renewable targets with storage planning help ensure energy systems remain stable as more solar capacity is added.",
             },
         ],
     },
     {
-        slug: "building-hydrogen-infrastructure-for-tomorrow",
-        title: "Building Hydrogen Infrastructure for Tomorrow",
+        slug: "infrastructure-pathways-for-solar-storage",
+        title: "Infrastructure Pathways for Solar + Storage",
         excerpt:
-            "The infrastructure challenge is often cited as the biggest barrier to hydrogen adoption. A practical look at how infrastructure can scale with demand rather than ahead of it.",
+            "How project developers are structuring solar and storage infrastructure for long-term reliability and grid integration.",
         category: "Industrial Deployment",
         date: "November 18, 2025",
-        image: "/blog/Building Hydrogen Infrastructure for Tomorrow.png",
+        image: "/blog/solar-storage-infrastructure.png",
         content: [
             {
                 type: "paragraph",
-                text: "One of the most frequently cited challenges for the hydrogen economy is the classic chicken-and-egg problem: without infrastructure, there is no demand; without demand, there is no infrastructure. However, this framing overlooks a practical middle path.",
+                text: "Building solar-plus-storage infrastructure requires a practical approach to site design, balance-of-plant, and connection to existing grid assets.",
             },
             {
                 type: "heading",
-                text: "On-Site Production Changes the Equation",
+                text: "Distributed and Grid-Connected Solutions",
             },
             {
                 type: "paragraph",
-                text: "Distributed hydrogen production, where electrolyzers are deployed at or near the point of use, fundamentally changes the infrastructure equation. Instead of building massive pipeline networks before demand materializes, production can be co-located with existing industrial facilities.",
+                text: "Projects can be configured for behind-the-meter industrial use or front-of-meter grid services, each with different technical and commercial priorities.",
             },
             {
                 type: "heading",
-                text: "Modular and Scalable Deployment",
+                text: "Modularity for Scale",
             },
             {
                 type: "paragraph",
-                text: "Modern electrolyzer systems are designed for modular deployment. Capacity can be added incrementally as demand grows, reducing upfront capital requirements and enabling a more gradual, lower-risk transition pathway for industrial users.",
+                text: "Modular solar and storage deployments allow capacity to grow with demand while minimizing upfront risk and simplifying commissioning.",
             },
         ],
     },
     {
-        slug: "hydrogen-safety-standards-industrial-deployment",
-        title: "Hydrogen Safety Standards for Industrial Deployment",
+        slug: "battery-storage-safety-and-standards",
+        title: "Battery Storage Safety and Standards",
         excerpt:
-            "Safety is paramount in hydrogen systems. An overview of the evolving standards landscape and best practices for industrial hydrogen handling.",
+            "A practical look at the safety standards and design best practices that support battery energy storage deployment.",
         category: "Research & Innovation",
         date: "November 2, 2025",
-        image: "/blog/Hydrogen Safety Standards for Industrial Deployment.png",
+        image: "/blog/battery-storage-safety.png",
         content: [
             {
                 type: "paragraph",
-                text: "As hydrogen deployment scales, ensuring the safety of production, storage, and handling systems becomes increasingly critical. The hydrogen industry benefits from decades of experience in industrial gas handling, but new applications bring new considerations.",
+                text: "Battery energy storage systems require rigorous safety and design standards to ensure reliable performance across applications.",
             },
             {
                 type: "heading",
-                text: "Established Safety Frameworks",
+                text: "Standards and Compliance",
             },
             {
                 type: "paragraph",
-                text: "International standards organizations including ISO, NFPA, and regional bodies have developed comprehensive safety standards for hydrogen systems. These cover everything from material compatibility and leak detection to ventilation requirements and emergency procedures.",
+                text: "International guidance from organizations such as IEEE and IEC helps define safe installation, fire prevention and operational management for battery systems.",
             },
             {
                 type: "heading",
-                text: "Design for Safety",
+                text: "Designing for Resilience",
             },
             {
                 type: "paragraph",
-                text: "The most effective approach to hydrogen safety is designing it into systems from the ground up. Modern hydrogen production systems incorporate multiple layers of safety including advanced sensors, automated shutdown systems, and inherently safe operating conditions.",
+                text: "Incorporating thermal management, monitoring and fail-safe controls from the outset supports long-term asset reliability.",
             },
         ],
     },
     {
-        slug: "strategic-partnerships-accelerating-hydrogen-adoption",
-        title: "Strategic Partnerships: Accelerating Hydrogen Adoption",
+        slug: "strategic-partnerships-accelerating-solar-deployment",
+        title: "Strategic Partnerships: Accelerating Solar Adoption",
         excerpt:
-            "How collaborative partnerships between technology developers, industrial operators, and infrastructure companies are accelerating the path to commercial hydrogen deployment.",
+            "How collaboration between developers, manufacturers and operators accelerates commercial solar and storage projects.",
         category: "Partnerships",
         date: "October 15, 2025",
-        image: "/blog/Strategic Partnerships Accelerating Hydrogen Adoption.png",
+        image: "/blog/solar-partnerships.png",
         content: [
             {
                 type: "paragraph",
-                text: "The transition to a hydrogen economy requires collaboration across the value chain. No single company can address all the technical, commercial, and regulatory challenges involved in scaling hydrogen from demonstration to industrial deployment.",
+                text: "Successful solar and storage deployment depends on partnerships that bring together technology, project execution and customer expertise.",
             },
             {
                 type: "heading",
-                text: "Technology-Industry Partnerships",
+                text: "Developer-Manufacturer Collaboration",
             },
             {
                 type: "paragraph",
-                text: "Partnerships between hydrogen technology developers and industrial end-users are particularly valuable. They provide technology developers with real-world operating requirements while giving industrial partners early access to next-generation solutions.",
+                text: "Working closely with module and battery suppliers helps ensure project specifications are matched to real-world performance expectations.",
             },
             {
                 type: "heading",
-                text: "Public-Private Collaboration",
+                text: "Project Delivery Alignment",
             },
             {
                 type: "paragraph",
-                text: "Government support through grants, tax incentives, and regulatory frameworks plays a crucial role in de-risking early-stage hydrogen projects. Effective public-private partnerships can bridge the gap between technology readiness and commercial viability.",
+                text: "Clear roles and coordinated execution reduce schedule risk and support smoother commissioning of solar-plus-storage assets.",
             },
         ],
     },
     {
-        slug: "sustainability-metrics-hydrogen-production",
-        title: "Sustainability Metrics for Hydrogen Production",
+        slug: "sustainability-metrics-for-solar-projects",
+        title: "Sustainability Metrics for Solar Projects",
         excerpt:
-            "Beyond carbon intensity is a comprehensive look at the sustainability metrics that matter for evaluating hydrogen production pathways.",
+            "Beyond carbon savings, a practical framework for evaluating solar and storage performance across lifecycle metrics.",
         category: "Sustainability",
         date: "October 1, 2025",
-        image: "/blog/Sustainability Metrics for Hydrogen Production.png",
+        image: "/blog/solar-sustainability.png",
         content: [
             {
                 type: "paragraph",
-                text: "Evaluating the sustainability of hydrogen production requires looking beyond simple carbon intensity metrics. A comprehensive assessment must consider water consumption, land use, material requirements, and end-of-life considerations for production equipment.",
+                text: "Evaluating solar projects requires a broad set of sustainability metrics including energy yield, land use, material sourcing and end-of-life planning.",
             },
             {
                 type: "heading",
-                text: "Life Cycle Assessment",
+                text: "Lifecycle Performance",
             },
             {
                 type: "paragraph",
-                text: "Life cycle assessment provides a rigorous framework for comparing hydrogen production pathways. It accounts for upstream emissions from equipment manufacturing, operational emissions, and downstream impacts including transportation and storage.",
+                text: "Lifecycle assessment helps compare module and storage choices across manufacturing, operation and decommissioning stages.",
             },
             {
                 type: "heading",
-                text: "Water and Resource Efficiency",
+                text: "Resource Efficiency",
             },
             {
                 type: "paragraph",
-                text: "Water consumption is a particularly important consideration for electrolysis-based hydrogen production. Advanced system designs that minimize water consumption and enable the use of lower-quality water sources can significantly improve the overall sustainability profile.",
+                text: "Reducing material intensity, improving recycling and extending system life are key levers for overall sustainability.",
             },
         ],
     },
     {
-        slug: "gigacore-approach-to-scalable-hydrogen",
-        title: "Gigacore's Approach to Scalable Hydrogen",
+        slug: "gigacore-approach-to-scalable-solar-storage",
+        title: "Gigacore's Approach to Scalable Solar + Storage",
         excerpt:
-            "An inside look at how Gigacore is developing hydrogen production systems designed from the ground up for industrial scale and economic viability.",
+            "An inside look at how Gigacore develops solar and storage systems designed for industrial scale and commercial viability.",
         category: "Company News",
         date: "September 15, 2025",
-        image: "/blog/Gigacore's Approach to Scalable Hydrogen.png",
+        image: "/blog/gigacore-solar-storage.png",
         content: [
             {
                 type: "paragraph",
-                text: "At Gigacore, our approach to hydrogen production is fundamentally different from incremental improvements to existing technologies. We started by redesigning the hydrogen production system from scratch for industrial scale.",
+                text: "At Gigacore, our approach to solar and storage deployment is rooted in practical design, industrial reliability and market readiness.",
             },
             {
                 type: "heading",
-                text: "First Principles Design",
+                text: "Practical System Design",
             },
             {
                 type: "paragraph",
-                text: "Rather than optimizing existing electrochemical systems, we focus on alternative physical mechanisms for hydrogen separation. This first-principles approach opens up design spaces that are simply not accessible through incremental improvement of legacy technologies.",
+                text: "We focus on solutions that can be scaled, integrated and delivered with the confidence required by commercial and utility customers.",
             },
             {
                 type: "heading",
@@ -340,7 +340,7 @@ export const blogPosts: BlogPost[] = [
             },
             {
                 type: "paragraph",
-                text: "Every design decision is evaluated against industrial requirements: continuous operation, maintenance accessibility, EPC compatibility, and economic viability at scale. Our systems are engineered not just to produce hydrogen, but to integrate seamlessly into existing industrial infrastructure.",
+                text: "Every design decision is evaluated against operational demands, installation practicality, and long-term performance expectations.",
             },
         ],
     },

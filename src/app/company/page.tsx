@@ -40,10 +40,10 @@ export default function CompanyPage() {
                         className="max-w-5xl mx-auto flex flex-col items-center"
                     >
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
-                            Gigacore is a climate-technology company focused on advancing next-generation hydrogen production systems designed for real-world industrial deployment.
+                            Gigacore is a climate-technology company focused on advancing next-generation solar and battery energy storage systems designed for real-world industrial deployment.
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
-                            We address a fundamental challenge: how to produce clean hydrogen at the <span className="text-brand-primary font-bold">scale and cost required by industry</span>, without relying on incremental improvements to legacy technologies.
+                            We address a fundamental challenge: how to deliver reliable solar and battery storage at the <span className="text-brand-primary font-bold">scale and cost required by industry</span>, without relying on incremental improvements to legacy technologies.
                         </motion.p>
                     </motion.div>
                 </SectionWrapper>
@@ -60,7 +60,7 @@ export default function CompanyPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            To enable the global transition to clean energy by developing innovative hydrogen technologies that are economically viable, industrially scalable, and deployable where energy demand already exists.
+                            To enable the global transition to clean energy by developing innovative solar and battery energy storage solutions that are economically viable, industrially scalable, and deployable where energy demand already exists.
                         </p>
                         <div className="p-4 bg-white rounded-lg border-l-4 border-brand-primary shadow-sm">
                             <p className="text-brand-primary font-medium italic">
@@ -82,7 +82,7 @@ export default function CompanyPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Gigacore envisions a future where green hydrogen is not a niche solution, but a core industrial input. We see a world where energy infrastructure is decoupled from carbon intensity without compromising on reliability or economic output.
+                            Gigacore envisions a future where solar and battery storage are not niche solutions, but core industrial assets. We see a world where energy infrastructure is decoupled from carbon intensity without compromising reliability or economic output.
                         </p>
                         <ul className="space-y-3">
                             <li className="flex gap-3 items-center text-gray-700 font-medium">
@@ -113,7 +113,7 @@ export default function CompanyPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Conventional hydrogen production methods struggle to meet the cost thresholds required for widespread industrial adoption.
+                            Conventional solar-plus-storage systems often struggle to meet the cost and reliability thresholds required for widespread industrial adoption.
                         </p>
                         <div className="space-y-4">
                             <div className="flex gap-4 items-start">
@@ -153,7 +153,7 @@ export default function CompanyPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Rather than optimizing existing electrochemical systems, we focus on alternative physical mechanisms that enable hydrogen separation using less total energy.
+                            Rather than optimizing existing infrastructure, we focus on integrated solar and battery system architectures that deliver lower total lifecycle energy cost and higher operational reliability.
                         </p>
                         <ul className="space-y-3">
                             <li className="flex gap-3 items-center text-gray-700 font-medium">
@@ -209,13 +209,13 @@ export default function CompanyPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            While the technology has global relevance, deployment strategy emphasizes regions and sectors where hydrogen demand is immediate and substantial.
+                            While the technology has global relevance, deployment strategy emphasizes regions and sectors where solar-plus-storage demand is immediate and substantial.
                         </p>
                         <div className="flex flex-wrap gap-2">
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Fertilizers</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Refining</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Metals</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Manufacturing Clusters</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Data Centers</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Manufacturing</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Utilities</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Industrial Clusters</span>
                         </div>
                     </>
                 }
@@ -235,10 +235,10 @@ export default function CompanyPage() {
                         <motion.div variants={fadeUp} className="text-center mb-14">
                             <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Deployment Strategy</span>
                             <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-4">
-                                Global Commercialisation <span className="text-brand-primary">Pathway</span>
+                                Global BESS Expansion <span className="text-brand-primary">Pathway</span>
                             </h2>
                             <p className="text-[15px] sm:text-[16px] text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                                Following pilot validation in India, expansion proceeds in three structured phases — each building on operational data, commercial relationships, and validated economics from the prior stage.
+                                Following successful deployment of LFP battery systems in India, expansion proceeds in three structured phases — each building on operational data, commercial relationships, and validated economics from the prior stage.
                             </p>
                         </motion.div>
 
@@ -253,9 +253,9 @@ export default function CompanyPage() {
                                     color: "border-brand-primary",
                                     items: [
                                         "Pilot deployment and independent certification",
-                                        "First commercial modular systems deployed",
-                                        "Ammonia and refining sector offtake",
-                                        "India SIGHT grant applications ($2–$5M target)",
+                                        "First commercial LFP cabinet systems deployed",
+                                        "Data center and manufacturing sector offtake",
+                                        "India renewable infrastructure partnerships",
                                     ],
                                     highlight: true,
                                 },
@@ -268,9 +268,9 @@ export default function CompanyPage() {
                                     color: "border-white/20",
                                     items: [
                                         "JV deployments with regional EPC partners",
-                                        "Green ammonia export infrastructure",
-                                        "Co-located renewable power agreements",
-                                        "Multi-site modular manufacturing in region",
+                                        "Solar + storage utility-scale infrastructure",
+                                        "Gotion BESS battery supply partnership",
+                                        "Multi-site modular system manufacturing in region",
                                     ],
                                     highlight: false,
                                 },
@@ -279,13 +279,13 @@ export default function CompanyPage() {
                                     years: "Years 4–5",
                                     region: "Europe & US",
                                     flag: "🌐",
-                                    title: "Industrial Decarbonisation Projects",
+                                    title: "Industrial Energy Infrastructure",
                                     color: "border-white/20",
                                     items: [
-                                        "EU hydrogen strategy alignment",
-                                        "US IRA-supported industrial projects",
-                                        "Refining and steel sector decarbonisation",
-                                        "IP acquisition or licensing opportunities",
+                                        "EU renewable energy infrastructure alignment",
+                                        "US IRA-supported renewable projects",
+                                        "Commercial & industrial solar-plus-storage",
+                                        "Grid services and peak shaving solutions",
                                     ],
                                     highlight: false,
                                 },
@@ -361,7 +361,7 @@ export default function CompanyPage() {
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Gigacore</h2>
                     <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        We work with partners who approach hydrogen as an industrial input and an infrastructure asset.
+                        We work with partners who approach solar and storage as industrial assets and strategic infrastructure.
                     </p>
                     <Link href="/contact">
                         <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">

@@ -7,9 +7,9 @@ import { Zap, DollarSign, Target, CheckCircle2, Hexagon, TrendingUp, Presentatio
 
 const atAGlance = [
     { label: "Current Performance", value: "~38 kWh/kg", desc: "AC wall-plug measurement — full system load validated across multiple runs" },
-    { label: "Pilot Milestone", value: "Sustain 38 kWh/kg at scale", desc: "Independent third-party certification of 1 kg H₂/hr pilot module required" },
+    { label: "Pilot Milestone", value: "Sustain 38 kWh/kg at scale", desc: "Independent third-party certification of our modular solar-plus-storage pilot required" },
     { label: "Current Status", value: "TRL 5-6 Lab Validated", desc: "Bench-scale proven; structured pilot programme next" },
-    { label: "Market Inflection", value: "$2.75/kg cost parity", desc: "Ammonia & refining parity relevant addressable segment" },
+    { label: "Market Inflection", value: "$2.75/kg cost parity", desc: "Cost parity relevant for heavy industrial energy buyers" },
     { label: "Series A Raise", value: "$20M (full Phase 1)", desc: "18-month runway covering pilot, demo, team, BD" }
 ];
 
@@ -33,12 +33,12 @@ const whyNow = [
     {
         icon: Zap,
         title: "Different Physics",
-        desc: "Laboratory-validated energy consumption of ~38 kWh/kg (AC wall-plug) vs 50 to 55 kWh/kg for conventional electrolysis — a 20–30% reduction. This is not an optimisation of existing technology. It operates on a fundamentally different electrochemical mechanism."
+        desc: "Laboratory-validated energy consumption of ~38 kWh/kg (AC wall-plug) vs conventional alternatives — a 20–30% reduction. This is not an optimisation of existing systems. It operates on a fundamentally different architecture."
     },
     {
         icon: DollarSign,
         title: "$2.75/kg Cost Threshold",
-        desc: "At this price, green hydrogen reaches parity with grey ammonia. For fertilizer, refining, and steel producers, the cost delta becomes bankable at plant level."
+        desc: "At this price, clean power and storage reach a competitive threshold for heavy industry. For fertilizer, refining, and steel producers, the cost delta becomes bankable at plant level."
     },
     {
         icon: Target,
@@ -48,7 +48,7 @@ const whyNow = [
     {
         icon: CheckCircle2,
         title: "Policy Support",
-        desc: "India SIGHT ($530M), the EU hydrogen strategy, and the US IRA create non-dilutive funding pathways. GigaCore is targeting $2 to $5M in grants alongside renewable PPA support."
+        desc: "India SIGHT ($530M), the EU clean energy strategy, and the US IRA create non-dilutive funding pathways. Gigacore is targeting $2 to $5M in grants alongside renewable PPA support."
     },
     {
         icon: Hexagon,
@@ -68,7 +68,7 @@ const whyNow = [
     {
         icon: LogOut,
         title: "Exit Pathway",
-        desc: "The intended exit is acquisition by a Tier 1 industrial buyer: EPC groups, industrial gas producers, or large-scale ammonia and refining operators. Each has a clear rationale for acquiring validated hydrogen IP. Acquisition is the appropriate exit at this stage."
+        desc: "The intended exit is acquisition by a Tier 1 industrial buyer: EPC groups, infrastructure operators, or large-scale industrial energy providers. Each has a clear rationale for acquiring validated clean energy IP. Acquisition is the appropriate exit at this stage."
     }
 ];
 

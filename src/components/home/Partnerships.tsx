@@ -7,16 +7,16 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 
 const COLLABORATION_MODELS = [
     {
-        title: "Pilot System Deployment",
-        description: "Validation of Gigacore stacks in representative industrial environments to confirm performance benchmarks."
+        title: "Technology Partnership",
+        description: "Working with global solar and battery technology partners to source proven, deployable platforms.",
     },
     {
-        title: "Joint Integration Programs",
-        description: "Co-engineering of balance-of-plant systems for specific downstream applications in steel and chemical sectors."
+        title: "Design Coordination",
+        description: "Aligning module selection, storage configuration, controls and project execution for smooth delivery.",
     },
     {
-        title: "Licensed Manufacturing Pathways",
-        description: "Enabling localized production for large-scale infrastructure projects through technology transfer agreements."
+        title: "Deployment Readiness",
+        description: "Supporting project planning, procurement coordination and commissioning for rapid implementation.",
     }
 ];
 
@@ -32,7 +32,7 @@ export default function Partnerships() {
                             viewport={{ once: true }}
                             className="text-[length:var(--font-h1)] font-bold leading-[1.15] text-brand-secondary mb-6"
                         >
-                            Industry Collaboration
+                            Solar + Storage Integration
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
@@ -41,14 +41,13 @@ export default function Partnerships() {
                             variants={fadeUp}
                             className="text-[15px] sm:text-[16px] text-brand-gray-600 leading-relaxed mb-10"
                         >
-                            Gigacore works with industrial operators, engineering developers, and manufacturing partners to advance deployment readiness.
+                            Gigacore brings solar generation, energy storage and power conversion together so systems are designed to perform reliably across project lifecycles.
                         </motion.p>
 
-                        {/* Image Integration */}
-                        <div className="relative w-full aspect-[16/9] mb-10 overflow-hidden">
+                        <div className="relative w-full aspect-[16/9] mb-10 overflow-hidden rounded-[32px] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
                             <Image
                                 src="/home/Industry Collaboration.png"
-                                alt="Global Industry Collaboration"
+                                alt="Solar and battery energy storage integration"
                                 fill
                                 className="object-cover"
                             />

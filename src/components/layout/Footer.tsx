@@ -15,7 +15,7 @@ export default function Footer() {
                             <Logo />
                         </Link>
                         <p className="text-gray-400 leading-relaxed text-sm max-w-xs">
-                            Advancing next-generation hydrogen production systems designed for real-world industrial deployment. Built for scale, reliability, and economic viability.
+                            Gigacore Systems provides solar and battery energy storage solutions for commercial, industrial and utility-scale energy projects in India.
                         </p>
                         <div className="flex gap-4 pt-4">
                             <a
@@ -84,7 +84,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="text-white mb-1 font-medium">General Inquiries</p>
-                                    <a href="mailto:info@gigacore.energy" className="hover:text-brand-primary transition-colors">info@gigacore.energy</a>
+                                    <a href="mailto:info@gigacore.systems" className="hover:text-brand-primary transition-colors">info@gigacore.systems</a>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4 group">
@@ -111,7 +111,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-gray-500">
-                    <p>© {new Date().getFullYear()} Gigacore Energy. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Gigacore Systems. All rights reserved.</p>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-brand-primary transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-brand-primary transition-colors">Terms of Service</a>

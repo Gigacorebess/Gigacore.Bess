@@ -82,7 +82,7 @@ export default function ContactPage() {
                             variants={fadeUp}
                             className="text-3xl md:text-4xl lg:text-[40px] leading-tight md:leading-snug font-medium text-gray-800"
                         >
-                            We engage with partners, institutions, and stakeholders evaluating hydrogen as an <span className="text-brand-primary font-bold">industrial input</span> and <span className="text-brand-primary font-bold">infrastructure asset</span>.
+                            We engage with partners, institutions, and stakeholders evaluating solar and storage as an <span className="text-brand-primary font-bold">industrial asset</span> and <span className="text-brand-primary font-bold">grid enabler</span>.
                         </motion.h2>
                     </motion.div>
                 </SectionWrapper>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            We work with organizations seeking deployable, scalable hydrogen solutions in industrial settings.
+                            We work with organizations seeking deployable, scalable solar and battery storage solutions in industrial settings.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Focus Areas:</h4>
                         <ul className="space-y-3">
@@ -363,7 +363,7 @@ export default function ContactPage() {
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Us</h2>
                     <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        If you are evaluating hydrogen solutions with a focus on cost, scale, and industrial viability, we invite you to connect.
+                        If you are evaluating solar and battery storage solutions with a focus on cost, scale, and industrial viability, we invite you to connect.
                     </p>
                     <Link href="mailto:info@gigacore.energy?subject=Request Executive Overview">
                         <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">

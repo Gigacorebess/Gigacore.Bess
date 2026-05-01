@@ -7,7 +7,7 @@ export default function Logo({ className = "", isScrolled = false }: { className
             <div className="relative w-[180px] h-[60px] md:w-[260px] md:h-[100px] shrink-0">
                 <Image
                     src={isScrolled ? "/black_logo.png" : "/white_logo.png"}
-                    alt="Gigacore Energy Logo"
+                    alt="Gigacore Systems Logo"
                     fill
                     className="object-contain object-left transition-opacity duration-300"
                 />
