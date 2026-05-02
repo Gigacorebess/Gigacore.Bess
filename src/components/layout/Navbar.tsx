@@ -16,21 +16,11 @@ interface NavLink {
 }
 
 const NAV_LINKS: NavLink[] = [
+    { name: "Solutions", href: "/products" },
     { name: "Products", href: "/products" },
     { name: "Technology", href: "/technology" },
-    { name: "Applications", href: "/applications" },
-    { name: "Market", href: "/market" },
-    { name: "Partnerships", href: "/partnership" },
-    {
-        name: "Company",
-        href: "/company",
-        children: [
-            { name: "About Us", href: "/company", icon: Building2 },
-            { name: "Our Team", href: "/company/team", icon: Users },
-            { name: "Blog", href: "/company/blog", icon: MessageSquare },
-            { name: "Contact", href: "/contact", icon: Phone },
-        ],
-    },
+    { name: "Company", href: "/company" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

@@ -29,18 +29,15 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* 2. Platform Links */}
+                    {/* 2. Products Links */}
                     <div>
-                        <h4 className="text-white font-semibold mb-6 text-lg tracking-wide">Platform</h4>
+                        <h4 className="text-white font-semibold mb-6 text-lg tracking-wide">Products</h4>
                         <ul className="space-y-4 text-sm">
                             {[
-                                { name: "Technology", href: "/technology" },
-                                { name: "Economics", href: "/economics" },
-                                { name: "Applications", href: "/applications" },
-                                { name: "Green Ammonia", href: "/applications#green-ammonia" },
-                                { name: "Green Steel", href: "/applications#green-steel" },
-                                { name: "Data Centers", href: "/applications#data-centers" },
-                                { name: "Refining & Petrochemicals", href: "/applications#refining-petrochemicals" }
+                                { name: "C&I BESS Cabinets", href: "/products" },
+                                { name: "Utility-Scale BESS", href: "/products" },
+                                { name: "Solar Modules", href: "/products" },
+                                { name: "Integrated Systems", href: "/products" }
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link href={item.href} className="hover:text-brand-primary transition-colors flex items-center gap-3 group">
@@ -57,11 +54,9 @@ export default function Footer() {
                         <h4 className="text-white font-semibold mb-6 text-lg tracking-wide">Company</h4>
                         <ul className="space-y-4 text-sm">
                             {[
-                                { name: "Market Opportunity", href: "/market" },
-                                { name: "Partnerships", href: "/partnership" },
                                 { name: "About Us", href: "/company" },
                                 { name: "Our Team", href: "/company/team" },
-                                { name: "Blog", href: "/company/blog" },
+                                { name: "Technology", href: "/technology" },
                                 { name: "Contact", href: "/contact" }
                             ].map((item) => (
                                 <li key={item.name}>

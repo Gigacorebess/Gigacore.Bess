@@ -14,7 +14,7 @@ const leaders = [
         name: "Manish Kothary",
         initials: "MK",
         title: "Chief Executive Officer",
-        bio: "Entrepreneur and technology founder developing scalable hydrogen and plasma-based energy systems for industrial decarbonisation. Brings 25+ years of experience building and scaling ventures across technology, financial platforms and industrial infrastructure.",
+        bio: "Entrepreneur and technology founder developing scalable solar and battery energy storage systems for reliable clean power deployment. Brings 25+ years of experience building and scaling ventures across technology, financial platforms and energy infrastructure.",
         background:
             "Previously senior roles at Barclays Global Investors, Wells Fargo and Pacific Gas & Electric.",
         education: [
@@ -35,9 +35,9 @@ const leaders = [
         title: "President, Infrastructure & Energy Platforms",
         bio: "Leads global infrastructure development and commercialization of advanced energy platforms. Brings cross-border project structuring expertise and strategic capital partnerships experience.",
         background:
-            "Background includes hydrogen and low-carbon fuel systems, rare earth extraction, and waste-to-energy infrastructure across North America, Europe, and emerging markets.",
+            "Background includes solar energy integration, battery storage systems, and energy infrastructure development across North America, Europe, and emerging markets.",
         education: ["B.Eng Mechanical Engineering - Ryerson University, Canada"],
-        tags: ["Cross-Border Projects", "Hydrogen Systems", "Infrastructure"],
+        tags: ["Cross-Border Projects", "Energy Infrastructure", "Solar + Storage"],
         credentials: [
             { label: "Continents", value: "3" },
             { label: "Sectors", value: "4+" },
@@ -49,14 +49,14 @@ const leaders = [
         name: "Igor Kuntevitsky",
         initials: "IK",
         title: "Chief Technology Officer",
-        bio: "Leads reactor architecture, hydrogen systems engineering, and IP development. Expertise spans matrix reactor systems, controlled partial oxidation, and integrated hydrogen purification.",
+        bio: "Leads battery storage architecture, energy systems engineering, and IP development. Expertise spans modular battery pack design, thermal management systems, and integrated power conversion.",
         background:
-            "Inventor of multiple granted U.S. patents covering hydrogen production and critical mineral recovery systems (including hydrocarbon gas pathways and red mud processing). GigaCore's next gen hydrogen method and reactor architecture are subject to a patent application currently in preparation.",
+            "Inventor of multiple granted U.S. patents covering battery storage systems and energy management technologies. GigaCore's advanced storage and thermal management methods are subject to patent applications currently in preparation.",
         education: [],
-        tags: ["Reactor Architecture", "U.S. Patents", "IP Development"],
+        tags: ["Battery Architecture", "U.S. Patents", "IP Development"],
         credentials: [
             { label: "US Patents", value: "4+" },
-            { label: "Domain", value: "H₂ + Minerals" },
+            { label: "Domain", value: "BESS + Solar" },
             { label: "IP Status", value: "Active" },
             { label: "Reactor", value: "Design Lead" },
         ],
@@ -103,7 +103,7 @@ const leaders = [
         name: "Prashanth Shetty",
         initials: "PS",
         title: "Business Development",
-        bio: "Leads business development across GigaCore’s hydrogen and energy infrastructure platform, driving institutional investor engagement, commercialisation strategy and strategic partnerships.",
+        bio: "Leads business development across GigaCore's solar and battery energy storage platform, driving institutional investor engagement, commercialisation strategy and strategic partnerships.",
         background:
             "Former executive leader at Verdigris, EMC and SAP with experience spanning global go-to-market strategy and enterprise technology platforms.",
         education: [
@@ -208,7 +208,7 @@ export default function TeamPage() {
                                 <span className="text-gray-400">&amp; Team</span>
                             </h1>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg mb-8">
-                                A team of operators, engineers, and scientists united by a single mission - making green hydrogen industrially deployable and economically viable.
+                                A team of operators, engineers, and scientists united by a single mission - delivering reliable solar and battery energy storage at scale.
                             </p>
 
                             <div className="relative pl-6 border-l-4 border-brand-primary/30 max-w-lg">
