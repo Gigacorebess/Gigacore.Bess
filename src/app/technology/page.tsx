@@ -5,9 +5,8 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 const fadeUp_ = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 export default function TechnologyPage() {
@@ -46,8 +45,8 @@ export default function TechnologyPage() {
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
-                        initial="initial"
-                        whileInView="whileInView"
+                        initial="hidden"
+                        whileInView="visible"
                         viewport={{ once: true }}
                         className="max-w-4xl mx-auto text-center"
                     >
@@ -67,8 +66,8 @@ export default function TechnologyPage() {
                     <SectionWrapper>
                         <motion.div
                             variants={staggerContainer}
-                            initial="initial"
-                            whileInView="whileInView"
+                            initial="hidden"
+                            whileInView="visible"
                             viewport={{ once: true }}
                             className={`flex flex-col ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-12 items-center`}
                         >
@@ -105,7 +104,7 @@ export default function TechnologyPage() {
                     <motion.div
                         variants={staggerContainer}
                         initial="initial"
-                        whileInView="whileInView"
+                        whileInView="visible"
                         viewport={{ once: true }}
                         className="max-w-3xl mx-auto text-center"
                     >
