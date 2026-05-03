@@ -41,7 +41,7 @@ const leaders = [
         credentials: [
             { label: "Continents", value: "3" },
             { label: "Sectors", value: "4+" },
-            { label: "Focus", value: "H₂ Infra" },
+            { label: "Focus", value: "Energy Infrastructure" },
             { label: "Markets", value: "Global" },
         ],
     },
@@ -58,7 +58,7 @@ const leaders = [
             { label: "US Patents", value: "4+" },
             { label: "Domain", value: "BESS + Solar" },
             { label: "IP Status", value: "Active" },
-            { label: "Reactor", value: "Design Lead" },
+            { label: "Systems", value: "Design Lead" },
         ],
     },
     {
@@ -169,10 +169,10 @@ const advisors = [
 ];
 
 const techExpertise = [
-    "Electrochemical Reactor Design",
+    "Electrochemical System Design",
     "Materials Science",
     "Nanostructured Media",
-    "Industrial Reactor Engineering",
+    "Industrial Energy Systems Engineering",
 ];
 
 const teamStats = [
@@ -268,7 +268,7 @@ export default function TeamPage() {
                         {/* Quote */}
                         <motion.div variants={fadeUp} className="lg:col-span-3 pl-6 md:pl-10 border-l-4 border-brand-primary">
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-normal md:leading-relaxed text-gray-800">
-                                Our leadership brings decades of experience across energy, finance, engineering, and government - combined with deep technical expertise in advanced reactor design and electrochemical systems. We are building the infrastructure for the next industrial era.
+                                Our leadership brings decades of experience across energy, finance, engineering, and government - combined with deep technical expertise in advanced electrochemical systems. We are building the infrastructure for the next industrial era.
                             </h2>
                         </motion.div>
 
@@ -277,7 +277,7 @@ export default function TeamPage() {
                             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                                 <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">Core Disciplines</p>
                                 <div className="flex flex-wrap gap-2">
-                                    {["Energy Finance", "EPC Execution", "Reactor Engineering", "Industrial Policy", "Capital Markets", "Tax & Compliance"].map((tag, i) => (
+                                    {["Energy Finance", "EPC Execution", "Energy Systems Engineering", "Industrial Policy", "Capital Markets", "Tax & Compliance"].map((tag, i) => (
                                         <span key={i} className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-[12px] font-semibold rounded-full">
                                             {tag}
                                         </span>
@@ -526,7 +526,7 @@ export default function TeamPage() {
                                 Core Technical Team
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Our bench of engineers and scientists forms the backbone of GigaCore's reactor development, rigorous testing, and expanding IP portfolio.
+                                Our bench of engineers and scientists forms the backbone of GigaCore's energy system development, rigorous testing, and expanding IP portfolio.
                             </p>
 
                             <div className="flex items-center gap-5 mb-10 pb-10 border-b border-gray-200">

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import { fadeUp, staggerContainer } from "@/lib/motion";
@@ -23,8 +24,20 @@ export default function Home() {
                         initial="initial"
                         whileInView="whileInView"
                         viewport={{ once: true }}
-                        className="max-w-4xl mx-auto text-center"
+                        className="max-w-6xl mx-auto text-center"
                     >
+                        {/* Logo */}
+                        <motion.div variants={fadeUp_} className="mb-8">
+                            <div className="relative w-[300px] h-[100px] md:w-[400px] md:h-[130px] mx-auto">
+                                <Image
+                                    src="/black_logo.png"
+                                    alt="Gigacore Systems Logo"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        </motion.div>
+
                         <motion.h1 variants={fadeUp_} className="text-5xl md:text-7xl font-bold mb-6 text-brand-secondary leading-tight">
                             Powering Solar + Storage Infrastructure
                         </motion.h1>
