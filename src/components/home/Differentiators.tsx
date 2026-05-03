@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import SectionWrapper from "../ui/SectionWrapper";
-import { fadeUp } from "@/lib/motion";
 import { Plus, Minus } from "lucide-react";
 
 const BENEFITS = [

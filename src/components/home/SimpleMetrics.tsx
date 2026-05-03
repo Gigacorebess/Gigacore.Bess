@@ -16,7 +16,17 @@ const midRow = [
     { prefix: "TRL ", value: 5, value2: 6, label: "Technology Readiness", subtext: "Lab-validated • pre-commercial pilot stage" }
 ];
 
-const AnimatedNumber = ({ value, value2 = undefined, from = 0, prefix = "", suffix = "", suffix2 = "", decimals = 0, isStatic = false, staticText = "" }: any) => {
+const AnimatedNumber = ({ value, value2 = undefined, from = 0, prefix = "", suffix = "", suffix2 = "", decimals = 0, isStatic = false, staticText = "" }: {
+    value: number;
+    value2?: number;
+    from?: number;
+    prefix?: string;
+    suffix?: string;
+    suffix2?: string;
+    decimals?: number;
+    isStatic?: boolean;
+    staticText?: string;
+}) => {
     const ref = useRef<HTMLSpanElement>(null);
     const ref2 = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(from);

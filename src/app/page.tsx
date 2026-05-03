@@ -1,11 +1,9 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { staggerContainer } from "@/lib/motion";
 
 const fadeUp_ = {
     initial: { opacity: 0, y: 20 },

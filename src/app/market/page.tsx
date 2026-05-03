@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
-import { ArrowRight, Globe, TrendingUp, BarChart3, Building2, Briefcase, CheckCircle, Target, ShieldCheck, Zap, TrendingDown, Factory } from "lucide-react";
+import { ArrowRight, Globe, TrendingDown, Building2, Target, ShieldCheck } from "lucide-react";
 
 const marketStats = [
     { label: "Global Demand", value: "95 MTPA", detail: "Existing industrial hydrogen consumption across fertilizers, refining, methanol, and steel." },
@@ -45,7 +45,7 @@ export default function MarketPage() {
                             Industrial demand for clean energy is already established — the question is economics.
                         </motion.h1>
                         <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                            Gigacore's market strategy focuses on proven demand centers, cost-competitive deployment models, and partners who can scale with established infrastructure.
+                            GigaCore&apos;s market strategy focuses on proven demand centers, cost-competitive deployment models, and partners who can scale with established infrastructure.
                         </motion.p>
                         <motion.div variants={fadeUp} className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                             <Button href="/partnership" variant="primary">Partner with us</Button>

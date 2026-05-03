@@ -213,7 +213,7 @@ export default function TeamPage() {
 
                             <div className="relative pl-6 border-l-4 border-brand-primary/30 max-w-lg">
                                 <p className="text-gray-700 italic font-medium leading-relaxed">
-                                    "Execution at scale requires more than just breakthrough science. It requires a discipline forged in industry, complex operations, and capital markets."
+                                    &quot;Execution at scale requires more than just breakthrough science. It requires a discipline forged in industry, complex operations, and capital markets.&quot;
                                 </p>
                             </div>
                         </motion.div>
@@ -431,7 +431,7 @@ export default function TeamPage() {
                         <motion.div variants={fadeUp} className="h-[3px] w-16 bg-brand-primary mt-5 rounded-full" />
                     </motion.div>
 
-                    {advisors.map((advisor, i) => (
+                    {advisors.map((advisor) => (
                         <motion.div
                             key={advisor.name}
                             variants={fadeUp}
@@ -526,7 +526,7 @@ export default function TeamPage() {
                                 Core Technical Team
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Our bench of engineers and scientists forms the backbone of GigaCore's energy system development, rigorous testing, and expanding IP portfolio.
+                                Our bench of engineers and scientists forms the backbone of GigaCore&apos;s energy system development, rigorous testing, and expanding IP portfolio.
                             </p>
 
                             <div className="flex items-center gap-5 mb-10 pb-10 border-b border-gray-200">

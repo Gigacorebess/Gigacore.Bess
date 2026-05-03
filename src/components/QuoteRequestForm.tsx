@@ -81,7 +81,7 @@ export default function QuoteRequestForm({ selectedProduct, selectedCategory, on
     const [showSummary, setShowSummary] = useState(false);
     const [copied, setCopied] = useState(false);
 
-    const handleInputChange = (field: keyof FormData, value: any) => {
+    const handleInputChange = (field: keyof FormData, value: string | string[] | boolean) => {
         setFormData(prev => ({ ...prev, [field]: value }));
     };
 

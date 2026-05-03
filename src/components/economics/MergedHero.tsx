@@ -18,8 +18,8 @@ const fadeUp = {
 export default function MergedHero() {
     const greenRef  = useRef<HTMLDivElement>(null);
     const orangeRef = useRef<HTMLDivElement>(null);
-    const greenFx   = useRef<any>(null);
-    const orangeFx  = useRef<any>(null);
+    const greenFx   = useRef<unknown>(null);
+    const orangeFx  = useRef<unknown>(null);
 
     useEffect(() => {
         let destroyed = false;
@@ -28,16 +28,15 @@ export default function MergedHero() {
             try {
                 const THREE     = await import("three");
                 const VantaMod  = await import("vanta/dist/vanta.cells.min");
-                const VantaCells = (VantaMod as any).default ?? VantaMod;
+                const VantaCells = (VantaMod as { default?: unknown }).default ?? VantaMod;
 
                 if (destroyed) return;
 
                 const isMobile = window.innerWidth < 768;
-                const size = isMobile ? 1.0 : 1.8;
 
                 // ── Green Vanta (left half — Gigacore identity) ──
                 if (greenRef.current && !greenFx.current) {
-                    greenFx.current = VantaCells({
+                    greenFx.current = (VantaCells as (options: Record<string, unknown>) => unknown)({
                         el: greenRef.current,
                         THREE,
                         mouseControls: false,
@@ -56,7 +55,7 @@ export default function MergedHero() {
 
                 // ── Orange Vanta (right half — Red Mud identity) ──
                 if (orangeRef.current && !orangeFx.current) {
-                    orangeFx.current = VantaCells({
+                    orangeFx.current = (VantaCells as (options: Record<string, unknown>) => unknown)({
                         el: orangeRef.current,
                         THREE,
                         mouseControls: false,

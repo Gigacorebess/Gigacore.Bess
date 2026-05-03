@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
-import { CheckCircle, Target, Factory, Building2, ShieldCheck, ArrowRight } from "lucide-react";
+import { CheckCircle, Factory, Building2, ShieldCheck, ArrowRight } from "lucide-react";
 
 const principles = [
     "Long-term alignment over transactional engagement",

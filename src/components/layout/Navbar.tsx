@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Users, MessageSquare, Phone, Building2 } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import clsx from "clsx";
 import SectionWrapper from "../ui/SectionWrapper";
 import { menuSlide } from "@/lib/motion";

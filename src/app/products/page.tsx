@@ -407,7 +407,7 @@ export default function ProductsPage() {
               { id: "utility_bess", name: "Utility-Scale BESS", desc: "Containerized systems for large-scale deployment" },
               { id: "solar", name: "Solar Modules", desc: "High-efficiency solar panels for various applications" },
               { id: "integrated", name: "Integrated Systems", desc: "Complete solar + storage solutions" },
-            ].map((category, idx) => (
+            ].map((category) => (
               <motion.button
                 key={category.id}
                 variants={fadeUp}

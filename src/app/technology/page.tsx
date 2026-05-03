@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { staggerContainer } from "@/lib/motion";
 
 const fadeUp_ = {
     hidden: { opacity: 0, y: 20 },

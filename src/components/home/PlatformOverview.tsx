@@ -1,8 +1,6 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
-import { fadeUp } from "@/lib/motion";
 import Image from "next/image";
 
 const MODULE_BRANDS = [

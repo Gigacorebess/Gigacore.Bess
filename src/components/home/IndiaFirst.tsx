@@ -46,7 +46,7 @@ export default function IndiaFirst() {
                         </motion.div>
 
                         <motion.h2 variants={fadeUp} className="text-2xl md:text-4xl font-bold mb-4 leading-tight text-brand-secondary">
-                            Built for <span className="text-gradient-green-glow font-bold">India's Scale</span> - Relevant Worldwide
+                            Built for <span className="text-gradient-green-glow font-bold">India&apos;s Scale</span> - Relevant Worldwide
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-gray-600 text-[15px] sm:text-[16px] mb-8 leading-relaxed">
                             India represents one of the world’s most demanding energy markets: price-sensitive, scale-intensive, and policy-driven.

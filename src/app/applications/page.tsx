@@ -8,7 +8,7 @@ import Button from "@/components/ui/Button";
 import Link from "next/link";
 import SplitSection from "@/components/ui/SplitSection";
 import {
-    Factory, Zap, TrendingUp, Beaker, CheckCircle, Server, Flame, Ship,
+    Factory, TrendingUp, Beaker, CheckCircle, Server,
 } from "lucide-react";
 
 /* ─── reusable check-list item ─────────────────────────────── */

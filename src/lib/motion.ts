@@ -2,7 +2,6 @@ import { Variants } from "framer-motion";
 
 // Premium Easing Curves
 const EASE_PREMIUM = [0.22, 1, 0.36, 1]; // Custom Cubic Bezier for "calm" snap
-const EASE_SOFT = [0.25, 0.1, 0.25, 1];
 
 export const fadeUp: Variants = {
     hidden: { opacity: 0, y: 30 },

@@ -61,7 +61,7 @@ const Button: React.FC<ButtonProps> = ({
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={classes}
-                    {...(props as any)}
+                    {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
                 >
                     <SlideBackground />
                     <span className="relative z-10 flex items-center gap-2">{children}</span>

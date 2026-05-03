@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { staggerContainer } from "@/lib/motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const fadeUp_ = {

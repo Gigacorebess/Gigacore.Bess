@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { staggerContainer } from "@/lib/motion";
 
 export default function Credibility() {
     return (

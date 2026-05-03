@@ -3,7 +3,7 @@ import React from "react";
 import SectionWrapper from "../ui/SectionWrapper";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { Zap, DollarSign, Target, CheckCircle2, Shield, Clock, Users } from "lucide-react";
+import { Zap, DollarSign, Target, Shield, Clock, Users } from "lucide-react";
 
 const customerBenefits = [
     {

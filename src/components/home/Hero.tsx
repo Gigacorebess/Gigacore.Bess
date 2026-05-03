@@ -5,7 +5,7 @@ import SectionWrapper from "../ui/SectionWrapper";
 import Button from "../ui/Button";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import * as THREE from "three";
-// @ts-ignore
+// @ts-expect-error - Vanta library types not available
 import CELLS from "vanta/dist/vanta.cells.min";
 
 const BADGES = [
@@ -43,7 +43,7 @@ export default function Hero() {
             );
         }
         return () => {
-            if (vantaEffect) (vantaEffect as any).destroy();
+            if (vantaEffect) (vantaEffect as { destroy: () => void }).destroy();
         };
     }, [vantaEffect]);
 
