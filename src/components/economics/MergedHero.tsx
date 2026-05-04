@@ -5,6 +5,10 @@ import Link from "next/link";
 
 const EASE_PREMIUM = [0.22, 1, 0.36, 1] as const;
 
+type VantaEffect = {
+  destroy: () => void;
+};
+
 const staggerContainer = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
@@ -18,8 +22,8 @@ const fadeUp = {
 export default function MergedHero() {
     const greenRef  = useRef<HTMLDivElement>(null);
     const orangeRef = useRef<HTMLDivElement>(null);
-    const greenFx   = useRef<unknown>(null);
-    const orangeFx  = useRef<unknown>(null);
+    const greenFx   = useRef<VantaEffect | null>(null);
+    const orangeFx  = useRef<VantaEffect | null>(null);
 
     useEffect(() => {
         let destroyed = false;
@@ -50,7 +54,7 @@ export default function MergedHero() {
                         size:   isMobile ? 1.2 : 2.0,
                         speed:  1.0,
                         distro: -1.0,
-                    });
+                    }) as VantaEffect;
                 }
 
                 // ── Orange Vanta (right half — Red Mud identity) ──
@@ -69,7 +73,7 @@ export default function MergedHero() {
                         size:   isMobile ? 1.2 : 2.0,
                         speed:  1.4,
                         distro: -1.0,
-                    });
+                    }) as VantaEffect;
                 }
             } catch (e) {
                 console.warn("Vanta init failed:", e);

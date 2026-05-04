@@ -17,7 +17,7 @@ const midRow = [
 ];
 
 const AnimatedNumber = ({ value, value2 = undefined, from = 0, prefix = "", suffix = "", suffix2 = "", decimals = 0, isStatic = false, staticText = "" }: {
-    value: number;
+    value?: number;
     value2?: number;
     from?: number;
     prefix?: string;
@@ -34,7 +34,7 @@ const AnimatedNumber = ({ value, value2 = undefined, from = 0, prefix = "", suff
     const isInView = useInView(ref, { once: true, margin: "0px" });
 
     useEffect(() => {
-        if (!isStatic && isInView) {
+        if (!isStatic && isInView && value !== undefined) {
             animate(motionValue, value, {
                 duration: 1.6,
                 ease: "easeOut"

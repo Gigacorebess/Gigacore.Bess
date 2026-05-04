@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion, HTMLMotionProps } from "framer-motion";
 import clsx from "clsx";
 
-interface ButtonProps extends HTMLMotionProps<"button"> {
+interface ButtonProps extends Omit<HTMLMotionProps<"button">, "onDrag" | "onDragStart" | "onDragEnd"> {
     variant?: "primary" | "secondary" | "outline" | "ghost";
     size?: "sm" | "md" | "lg";
     href?: string;
@@ -61,7 +61,7 @@ const Button: React.FC<ButtonProps> = ({
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={classes}
-                    {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+                    {...(props as HTMLMotionProps<"a">)}
                 >
                     <SlideBackground />
                     <span className="relative z-10 flex items-center gap-2">{children}</span>

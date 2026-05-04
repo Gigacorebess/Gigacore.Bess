@@ -5,7 +5,6 @@ import SectionWrapper from "../ui/SectionWrapper";
 import Button from "../ui/Button";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import * as THREE from "three";
-// @ts-expect-error - Vanta library types not available
 import CELLS from "vanta/dist/vanta.cells.min";
 
 const BADGES = [
@@ -18,14 +17,14 @@ const BADGES = [
 
 export default function Hero() {
     const vantaRef = useRef(null);
-    const [vantaEffect, setVantaEffect] = useState(null);
+    const [vantaEffect, setVantaEffect] = useState<{ destroy: () => void } | null>(null);
 
     useEffect(() => {
         const isMobile = window.innerWidth < 768;
 
         if (!vantaEffect) {
             setVantaEffect(
-                CELLS({
+                (CELLS as (options: Record<string, unknown>) => { destroy: () => void })({
                     el: vantaRef.current,
                     mouseControls: true,
                     touchControls: true,
