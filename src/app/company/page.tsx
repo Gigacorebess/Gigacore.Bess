@@ -6,26 +6,43 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import SplitSection from "@/components/ui/SplitSection";
+import Image from "next/image";
 import { Target, Zap, Rocket, ShieldCheck, UserCheck, CheckCircle } from "lucide-react";
 
 export default function CompanyPage() {
     return (
         <main className="bg-white">
             {/* 1. Hero Section */}
-            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
+            <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/company/hero%20section.jpg')] bg-cover bg-center opacity-60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
+                    <Image
+                        src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_08_00%20PM.png"
+                        alt="Gigacore headquarters"
+                        fill
+                        className="object-cover"
+                        priority
+                        unoptimized
+                    />
                 </div>
-                <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center text-white z-10">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-tight text-white"
-                    >
-                        About <span className="text-gradient-green-glow">Gigacore</span>
-                    </motion.h1>
+                <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center z-10">
+                    <div className="bg-white/75 backdrop-blur-md rounded-2xl px-8 py-8 md:px-14 md:py-10 shadow-xl max-w-2xl">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-[length:var(--font-hero)] font-bold tracking-tight mb-4 leading-tight text-brand-secondary"
+                        >
+                            About <span className="text-brand-primary">Gigacore</span>
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-lg text-gray-600 max-w-xl"
+                        >
+                            Advancing solar and battery energy storage systems for real-world industrial deployment.
+                        </motion.p>
+                    </div>
                 </SectionWrapper>
             </section>
 
@@ -42,7 +59,7 @@ export default function CompanyPage() {
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
                             Gigacore is a climate-technology company focused on advancing next-generation solar and battery energy storage systems designed for real-world industrial deployment.
                         </motion.h2>
-                        <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-5 max-w-3xl leading-relaxed">
                             We address a fundamental challenge: how to deliver reliable solar and battery storage at the <span className="text-brand-primary font-bold">scale and cost required by industry</span>, without relying on incremental improvements to legacy technologies.
                         </motion.p>
                     </motion.div>
@@ -53,8 +70,9 @@ export default function CompanyPage() {
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/company/Our%20Mission.jpg"
+                imageSrc="/Our%20Mission.jpg"
                 imageAlt="Our Mission"
+                unoptimized
                 subtitle="Purpose"
                 title="Our Mission"
                 content={
@@ -75,8 +93,9 @@ export default function CompanyPage() {
             <SplitSection
                 theme="gray"
                 imagePosition="right"
-                imageSrc="/company/Our%20Vision.jpg"
+                imageSrc="/Our%20Vision.jpg"
                 imageAlt="Our Vision"
+                unoptimized
                 subtitle="Aspiration"
                 title="Our Vision"
                 content={
@@ -106,8 +125,9 @@ export default function CompanyPage() {
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/company/Why%20Giga.jpg"
+                imageSrc="/Why%20Gigacore%20Exists.jpg"
                 imageAlt="The Challenge"
+                unoptimized
                 subtitle="The Challenge"
                 title="Why Gigacore Exists"
                 content={
@@ -142,84 +162,107 @@ export default function CompanyPage() {
                 }
             />
 
-            {/* 6. Technology Philosophy */}
-            <SplitSection
-                theme="gray"
-                imagePosition="right"
-                imageSrc="/company/Technology%20Philosophy.jpg"
-                imageAlt="Philosophy"
-                subtitle="Innovation"
-                title="Technology Philosophy"
-                content={
-                    <>
-                        <p className="mb-6">
-                            Rather than optimizing existing infrastructure, we focus on integrated solar and battery system architectures that deliver lower total lifecycle energy cost and higher operational reliability.
-                        </p>
-                        <ul className="space-y-3">
-                            <li className="flex gap-3 items-center text-gray-700 font-medium">
-                                <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" /> Precision energy delivery
-                            </li>
-                            <li className="flex gap-3 items-center text-gray-700 font-medium">
-                                <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" /> Moderate operating conditions
-                            </li>
-                            <li className="flex gap-3 items-center text-gray-700 font-medium">
-                                <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" /> Distributed interaction architectures
-                            </li>
-                        </ul>
-                    </>
-                }
-            />
+            {/* 6 & 7. Technology Philosophy + Industrial Deployment */}
+            <section className="py-[var(--spacing-section)]" style={{ background: "linear-gradient(135deg, #c8daf5 0%, #ddeaf9 45%, #c4d8f2 100%)" }}>
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+                    >
+                        {/* Technology Philosophy — light card */}
+                        <motion.div
+                            variants={fadeUp}
+                            whileHover={{ y: -4 }}
+                            transition={{ type: "spring", stiffness: 280 }}
+                            className="rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-xl transition-shadow duration-300" style={{ background: "linear-gradient(145deg, #f0f6ff 0%, #e2eef8 100%)" }}
+                        >
+                            <div className="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-5">
+                                <Zap className="w-6 h-6 text-brand-primary" />
+                            </div>
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-2 block">Innovation</span>
+                            <h2 className="text-2xl font-bold mb-4 text-brand-secondary">Technology Philosophy</h2>
+                            <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                                Rather than optimizing existing infrastructure, we focus on integrated solar and battery system architectures that deliver lower total lifecycle energy cost and higher operational reliability.
+                            </p>
+                            <ul className="space-y-3">
+                                {["Precision energy delivery", "Moderate operating conditions", "Distributed interaction architectures"].map((item, i) => (
+                                    <li key={i} className="flex gap-3 items-center text-gray-700 text-sm font-medium">
+                                        <CheckCircle className="w-4 h-4 text-brand-primary shrink-0" /> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
 
-            {/* 7. Industrial Deployment */}
-            <SplitSection
-                theme="light"
-                imagePosition="left"
-                imageSrc="/company/Built%20for%20Industrial%20Deployment.jpg"
-                imageAlt="Deployment"
-                subtitle="Execution"
-                title="Industrial Deployment"
-                content={
-                    <>
-                        <p className="mb-6">
-                            The objective is to move beyond laboratory success toward commercially relevant, infrastructure-grade systems.
-                        </p>
-                        <ul className="space-y-3">
-                            <li className="flex gap-3 items-center text-gray-700 font-medium">
-                                <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" /> Continuous operation requirements
-                            </li>
-                            <li className="flex gap-3 items-center text-gray-700 font-medium">
-                                <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" /> EPC compatibility
-                            </li>
-                            <li className="flex gap-3 items-center text-gray-700 font-medium">
-                                <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" /> Third-party validation
-                            </li>
-                        </ul>
-                    </>
-                }
-            />
+                        {/* Industrial Deployment — light card */}
+                        <motion.div
+                            variants={fadeUp}
+                            whileHover={{ y: -4 }}
+                            transition={{ type: "spring", stiffness: 280 }}
+                            className="rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-xl transition-shadow duration-300" style={{ background: "linear-gradient(145deg, #f0f6ff 0%, #e2eef8 100%)" }}
+                        >
+                            <div className="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-5">
+                                <Rocket className="w-6 h-6 text-brand-primary" />
+                            </div>
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-2 block">Execution</span>
+                            <h2 className="text-2xl font-bold mb-4 text-brand-secondary">Industrial Deployment</h2>
+                            <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                                The objective is to move beyond laboratory success toward commercially relevant, infrastructure-grade systems.
+                            </p>
+                            <ul className="space-y-3">
+                                {["Continuous operation requirements", "EPC compatibility", "Third-party validation"].map((item, i) => (
+                                    <li key={i} className="flex gap-3 items-center text-gray-700 text-sm font-medium">
+                                        <CheckCircle className="w-4 h-4 text-brand-primary shrink-0" /> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
 
             {/* 8. Global Impact */}
-            <SplitSection
-                theme="gray"
-                imagePosition="right"
-                imageSrc="/company/Global%20Impact,%20Practical%20Focus.webp"
-                imageAlt="Global Impact"
-                subtitle="Reach"
-                title="Global Impact, Practical Focus"
-                content={
-                    <>
-                        <p className="mb-6">
-                            While the technology has global relevance, deployment strategy emphasizes regions and sectors where solar-plus-storage demand is immediate and substantial.
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Data Centers</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Manufacturing</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Utilities</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Industrial Clusters</span>
+            <section className="relative min-h-[480px] flex items-center overflow-hidden">
+                <div className="absolute inset-0">
+                    <Image
+                        src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_42_12%20PM.png"
+                        alt="Global Impact"
+                        fill
+                        className="object-cover object-center"
+                        unoptimized
+                    />
+                </div>
+                <SectionWrapper className="relative z-10 py-16">
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="max-w-lg"
+                    >
+                        <div className="bg-white/85 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-xl">
+                            <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3 block">
+                                Reach
+                            </motion.span>
+                            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold mb-5 text-brand-secondary leading-tight">
+                                Global Impact, Practical Focus
+                            </motion.h2>
+                            <motion.p variants={fadeUp} className="text-gray-600 mb-6 leading-relaxed">
+                                While the technology has global relevance, deployment strategy emphasizes regions and sectors where solar-plus-storage demand is immediate and substantial.
+                            </motion.p>
+                            <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
+                                {["Data Centers", "Manufacturing", "Utilities", "Industrial Clusters"].map((tag) => (
+                                    <span key={tag} className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </motion.div>
                         </div>
-                    </>
-                }
-            />
+                    </motion.div>
+                </SectionWrapper>
+            </section>
 
             {/* Solutions Built Around Your Site */}
             <section className="py-[var(--spacing-section)] bg-white border-y border-brand-primary/5">
@@ -231,7 +274,7 @@ export default function CompanyPage() {
                         viewport={{ once: true }}
                         className="w-full"
                     >
-                        <motion.div variants={fadeUp} className="text-center mb-14">
+                        <motion.div variants={fadeUp} className="text-center mb-6">
                             <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Customer Solutions</span>
                             <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary mb-4">
                                 Solutions Built Around <span className="text-brand-primary">Your Site</span>
@@ -277,7 +320,7 @@ export default function CompanyPage() {
                                     ]
                                 }
                             ].map((item, i) => (
-                                <div key={i} className="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-100">
+                                <div key={i} className="bg-brand-light rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300 border border-brand-blue-100">
                                     <div className="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 text-brand-primary">
                                         <item.icon className="w-6 h-6" />
                                     </div>
@@ -298,15 +341,127 @@ export default function CompanyPage() {
                 </SectionWrapper>
             </section>
 
+            {/* Full-Chain Manufacturing */}
+            <section className="py-12 bg-white">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-6">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3 block">Manufacturing</span>
+                            <h2 className="text-4xl font-bold text-brand-secondary">Full-Chain Manufacturing</h2>
+                            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Integrated supply chain from cell production to system deployment, ensuring quality at every stage.</p>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="relative w-full rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/1218%20Re_GOTION%20EN_260510_195022%20conv%2025.png"
+                                alt="Full-Chain Manufacturing"
+                                width={1400}
+                                height={787}
+                                className="w-full h-auto"
+                                unoptimized
+                            />
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* Strategy */}
+            <section className="py-12 bg-brand-light">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-6">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3 block">Strategy</span>
+                            <h2 className="text-4xl font-bold text-brand-secondary">Corporate Strategy</h2>
+                            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Our strategic roadmap for delivering sustainable energy solutions at industrial scale.</p>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="relative w-full rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/1.png"
+                                alt="Corporate Strategy"
+                                width={1400}
+                                height={787}
+                                className="w-full h-auto"
+                                unoptimized
+                            />
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* Partners */}
+            <section className="py-12 bg-white">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-6">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3 block">Ecosystem</span>
+                            <h2 className="text-4xl font-bold text-brand-secondary">Global Partners</h2>
+                            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Working with leading industrial operators, infrastructure developers, and public-sector enterprises worldwide.</p>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="relative w-full rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/1218%20Re_GOTION%20EN_260510_195022%20conv%2023.png"
+                                alt="Global Partners"
+                                width={1400}
+                                height={787}
+                                className="w-full h-auto"
+                                unoptimized
+                            />
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* Sustainability */}
+            <section className="py-12 bg-brand-light">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-6">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3 block">Sustainability</span>
+                            <h2 className="text-4xl font-bold text-brand-secondary">ESG Commitment</h2>
+                            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Our commitment to environmental, social, and governance principles across all operations and products.</p>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="relative w-full rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/1218%20Re_GOTION%20EN_260510_195022%20conv%2027.png"
+                                alt="ESG Commitment"
+                                width={1400}
+                                height={787}
+                                className="w-full h-auto"
+                                unoptimized
+                            />
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
             {/* 9. Credibility */}
             <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
-                    <div className="max-w-4xl mx-auto text-center mb-16">
+                    <div className="max-w-4xl mx-auto text-center mb-8">
                         <div className="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary">
                             <ShieldCheck className="w-8 h-8" />
                         </div>
                         <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">Commitment to <span className="text-gradient-green-glow">Credibility</span></h2>
-                        <p className="text-[15px] sm:text-[16px] text-gray-600 mb-12 leading-relaxed">
+                        <p className="text-[15px] sm:text-[16px] text-gray-600 mb-6 leading-relaxed">
                             We prioritize long-term credibility over short-term visibility. We build trust through measurable performance, transparent milestones, and structured validation.
                         </p>
 
@@ -340,12 +495,39 @@ export default function CompanyPage() {
                 </SectionWrapper>
             </section>
 
+            {/* Talent */}
+            <section className="py-12 bg-white">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-6">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3 block">Our Team</span>
+                            <h2 className="text-4xl font-bold text-brand-secondary">People Behind the Mission</h2>
+                            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">A multidisciplinary team of engineers, scientists, and industry professionals driving clean energy innovation.</p>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="relative w-full rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_39_17%20PM.png"
+                                alt="Our Team"
+                                width={1400}
+                                height={787}
+                                className="w-full h-auto"
+                                unoptimized
+                            />
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
             {/* 10. CTA Section */}
-            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-                <SectionWrapper className="relative z-10 text-center">
+            <section className="py-[var(--spacing-section)] lg:py-[var(--spacing-section)] bg-brand-secondary">
+                <SectionWrapper className="text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Gigacore</h2>
-                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-5 max-w-2xl mx-auto leading-relaxed">
                         We work with partners who approach solar and storage as industrial assets and strategic infrastructure.
                     </p>
                     <Link href="/contact">

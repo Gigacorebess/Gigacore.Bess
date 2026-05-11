@@ -23,17 +23,17 @@ const Button: React.FC<ButtonProps> = ({
     const baseStyles = "group relative inline-flex items-center justify-center rounded-full font-bold transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden z-20";
 
     const variants = {
-        primary: "bg-brand-primary text-brand-secondary border border-brand-primary hover:text-brand-primary shadow-[0_0_20px_rgba(0,213,99,0.4)]",
+        primary: "bg-brand-primary text-white border border-brand-primary hover:text-brand-primary shadow-[0_0_20px_rgba(74,125,180,0.4)]",
         secondary: "bg-brand-secondary text-white border border-brand-secondary hover:text-brand-secondary hover:border-transparent",
         outline: "bg-transparent text-white border-2 border-white hover:text-brand-primary hover:border-transparent",
         ghost: "bg-transparent text-brand-secondary hover:text-brand-primary",
     };
 
     const slideBg = {
-        primary: "bg-white", // White slide looks great sliding over bright green
+        primary: "bg-white",
         secondary: "bg-brand-primary",
-        outline: "bg-white", // White slide looks great over transparent
-        ghost: "bg-brand-green-50",
+        outline: "bg-white",
+        ghost: "bg-brand-blue-50",
     };
 
     const sizes = {
