@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
@@ -368,32 +369,82 @@ export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-24 overflow-hidden min-h-[60vh] flex items-center">
+        <div className="absolute inset-0">
+          <Image
+            src="/1218%20Re_GOTION%20EN_260510_195022%20Image%5B17%5D.jpg"
+            alt="Battery storage products"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+        </div>
+        <SectionWrapper className="relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="max-w-xl ml-auto"
+          >
+            <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-xl">
+              <motion.p variants={fadeUp} className="uppercase tracking-[0.22em] text-sm font-semibold text-brand-primary mb-3">
+                Products
+              </motion.p>
+              <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-bold mb-4 text-brand-secondary leading-tight">
+                Storage and Solar Products
+              </motion.h1>
+              <motion.p variants={fadeUp} className="text-lg text-gray-600 leading-relaxed">
+                Battery storage and solar technologies for commercial, industrial, and utility-scale energy projects.
+              </motion.p>
+            </div>
+          </motion.div>
+        </SectionWrapper>
+      </section>
+
+      {/* Product Overview Images */}
+      <section className="py-12 bg-white">
         <SectionWrapper>
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="grid md:grid-cols-2 gap-8"
           >
-            <motion.p variants={fadeUp} className="uppercase tracking-[0.22em] text-sm font-semibold text-brand-primary mb-4">
-              Products
-            </motion.p>
-
-            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-bold mb-6 text-brand-secondary leading-tight">
-              Storage and Solar Products
-            </motion.h1>
-
-            <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Battery storage and solar technologies for commercial, industrial, and utility-scale energy projects.
-            </motion.p>
+            <motion.div variants={fadeUp}>
+              <p className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3">Energy Storage</p>
+              <h3 className="text-2xl font-bold text-brand-secondary mb-6">BESS Product Range</h3>
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-video">
+                <Image
+                  src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_11_02%20PM.png"
+                  alt="Energy Storage Products"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            </motion.div>
+            <motion.div variants={fadeUp}>
+              <p className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3">Battery Technology</p>
+              <h3 className="text-2xl font-bold text-brand-secondary mb-6">Cell Technology</h3>
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-video">
+                <Image
+                  src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_19_28%20PM.png"
+                  alt="Battery Cell Technology"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            </motion.div>
           </motion.div>
         </SectionWrapper>
       </section>
 
       {/* Category Overview */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-brand-light">
         <SectionWrapper>
           <motion.div
             variants={staggerContainer}
@@ -429,7 +480,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <SectionWrapper>
           <motion.div
             key={selectedCategory}
@@ -437,7 +488,7 @@ export default function ProductsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
               {getCategoryTitle()}
             </h2>
 
@@ -456,7 +507,7 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-brand-secondary text-white">
+      <section className="py-12 bg-brand-secondary text-white">
         <SectionWrapper>
           <motion.div
             variants={staggerContainer}

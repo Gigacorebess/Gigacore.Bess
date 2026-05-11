@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\av074\\\\Downloads\\\\Gigacore.Bess-1\\\\.next\" -ErrorAction SilentlyContinue)",
+      "Bash(Write-Host \"Cache cleared\")",
+      "Bash(node -e \"const pkg = require\\('./node_modules/framer-motion/package.json'\\); console.log\\(pkg.version\\)\")"
+    ]
+  }
+}

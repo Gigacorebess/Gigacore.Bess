@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import clsx from "clsx";
@@ -16,7 +15,6 @@ interface NavLink {
 }
 
 const NAV_LINKS: NavLink[] = [
-    { name: "Solutions", href: "/products" },
     { name: "Products", href: "/products" },
     { name: "Technology", href: "/technology" },
     { name: "Company", href: "/company" },
@@ -24,18 +22,12 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 export default function Navbar() {
-    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
     const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    // Blog listing page has dark hero → white navbar text (like Home)
-    // Blog detail pages have light background → need dark navbar text
-    const isBlogDetailPage = /^\/company\/blog\/.+/.test(pathname || "");
-    const isTeamPage = pathname?.includes("/company/team");
-    const useDarkText = isScrolled || isTeamPage || isBlogDetailPage;
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -60,13 +52,13 @@ export default function Navbar() {
                 className={clsx(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                     isScrolled
-                        ? "bg-white/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-white/20 py-3"
-                        : "bg-transparent py-4"
+                        ? "bg-white/90 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.06)] border-b border-gray-100 py-2"
+                        : "bg-white/70 backdrop-blur-sm py-2"
                 )}
             >
                 <SectionWrapper className="flex items-center justify-between">
                     <Link href="/" className="relative z-50 group">
-                        <Logo isScrolled={useDarkText || isMobileOpen} />
+                        <Logo />
                     </Link>
 
                     {/* Desktop nav */}
@@ -82,7 +74,7 @@ export default function Navbar() {
                                     <button
                                         className={clsx(
                                             "text-sm font-medium transition-all duration-300 relative group tracking-wide flex items-center gap-1",
-                                            useDarkText ? "text-brand-secondary hover:text-brand-primary" : "text-white hover:text-brand-primary"
+                                            "text-brand-secondary hover:text-brand-primary"
                                         )}
                                     >
                                         {link.name}
@@ -126,7 +118,7 @@ export default function Navbar() {
                                     href={link.href}
                                     className={clsx(
                                         "text-sm font-medium transition-all duration-300 relative group tracking-wide",
-                                        useDarkText ? "text-brand-secondary hover:text-brand-primary" : "text-white hover:text-brand-primary"
+                                        "text-brand-secondary hover:text-brand-primary"
                                     )}
                                 >
                                     {link.name}
@@ -143,7 +135,7 @@ export default function Navbar() {
                         onClick={() => setIsMobileOpen(!isMobileOpen)}
                         className={clsx(
                             "xl:hidden relative z-50 p-2 transition-colors duration-300",
-                            isMobileOpen || useDarkText ? "text-brand-secondary" : "text-white"
+                            "text-brand-secondary"
                         )}
                     >
                         {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

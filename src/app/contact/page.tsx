@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { staggerContainer } from "@/lib/motion";
 import { Mail, Phone, MapPin } from "lucide-react";
@@ -15,27 +16,39 @@ export default function ContactPage() {
     return (
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 bg-white overflow-hidden">
-                <SectionWrapper>
+            <section className="relative pt-32 pb-24 min-h-screen flex items-center">
+                <div className="absolute inset-0">
+                    <Image
+                        src="/1218%20Re_GOTION%20EN_260510_195022%20Image%5B28%5D.jpg"
+                        alt="Gigacore headquarters"
+                        fill
+                        className="object-cover"
+                        priority
+                        unoptimized
+                    />
+                </div>
+                <SectionWrapper className="relative z-10">
                     <motion.div
                         variants={staggerContainer}
                         initial="initial"
                         whileInView="whileInView"
                         viewport={{ once: true }}
-                        className="max-w-4xl mx-auto text-center"
+                        className="max-w-xl mx-auto text-center"
                     >
-                        <motion.h1 variants={fadeUp_} className="text-5xl md:text-7xl font-bold mb-6 text-brand-secondary leading-tight">
-                            Contact Us
-                        </motion.h1>
-                        <motion.p variants={fadeUp_} className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                            Ready to discuss your solar and storage project? Get in touch with our team.
-                        </motion.p>
+                        <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-xl">
+                            <motion.h1 variants={fadeUp_} className="text-4xl md:text-6xl font-bold mb-4 text-brand-secondary leading-tight">
+                                Contact Us
+                            </motion.h1>
+                            <motion.p variants={fadeUp_} className="text-lg text-gray-600 leading-relaxed">
+                                Ready to discuss your solar and storage project? Get in touch with our team.
+                            </motion.p>
+                        </div>
                     </motion.div>
                 </SectionWrapper>
             </section>
 
             {/* Contact Information */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-12 bg-brand-light">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -44,7 +57,7 @@ export default function ContactPage() {
                         viewport={{ once: true }}
                         className="max-w-4xl mx-auto"
                     >
-                        <motion.h2 variants={fadeUp_} className="text-4xl font-bold text-center mb-16 text-brand-secondary">
+                        <motion.h2 variants={fadeUp_} className="text-4xl font-bold text-center mb-8 text-brand-secondary">
                             Get In Touch
                         </motion.h2>
 
@@ -104,7 +117,7 @@ export default function ContactPage() {
             </section>
 
             {/* Project Inquiry Note */}
-            <section className="py-24 bg-white">
+            <section className="py-12 bg-white">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}

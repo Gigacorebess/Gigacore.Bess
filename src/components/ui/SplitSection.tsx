@@ -33,8 +33,8 @@ const SplitSection: React.FC<SplitSectionProps> = ({
 
     const themeStyles = {
         light: 'bg-white text-gray-900',
-        dark: 'bg-gray-900 text-white',
-        gray: 'bg-gray-50 text-gray-900',
+        dark: 'bg-brand-secondary text-white',
+        gray: 'bg-brand-light text-gray-900',
     };
 
     const textColors = {
@@ -44,13 +44,13 @@ const SplitSection: React.FC<SplitSectionProps> = ({
     };
 
     const headingColors = {
-        light: 'text-[#001F1B]', // Very dark green/black
+        light: 'text-brand-secondary',
         dark: 'text-white',
-        gray: 'text-[#001F1B]',
+        gray: 'text-brand-secondary',
     };
 
     return (
-        <section className={cn("py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] overflow-hidden", themeStyles[theme], className)}>
+        <section className={cn("py-[var(--spacing-section)] overflow-hidden", themeStyles[theme], className)}>
             <SectionWrapper>
                 <div className={cn(
                     "grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center"
