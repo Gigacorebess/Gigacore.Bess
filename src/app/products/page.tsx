@@ -2,12 +2,11 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import QuoteRequestForm from "@/components/QuoteRequestForm";
-import { Eye, Mail, ZoomIn, X, ShieldCheck, Cpu, LayoutGrid, Battery, Zap, RefreshCw, ChevronRight, Leaf, Wifi, Award } from "lucide-react";
+import { Eye, Mail, X, ShieldCheck, Cpu, LayoutGrid, Battery, Zap, RefreshCw, ChevronRight, Leaf, Wifi, Award } from "lucide-react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
