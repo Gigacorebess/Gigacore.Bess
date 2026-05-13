@@ -287,28 +287,33 @@ function ProductCard({ product, onViewSpecs, onRequestQuote }: {
   return (
     <motion.div
       variants={fadeUp}
-      className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+      className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b from-white to-slate-50/80 p-6 shadow-[0_10px_35px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-primary/40 hover:shadow-[0_18px_50px_rgba(74,125,180,0.2)]"
     >
-      <div className="mb-4">
-        <h3 className="text-lg font-bold text-gray-900 mb-2">{product.name}</h3>
-        <div className="space-y-1 text-sm text-gray-600">
-          <p><span className="font-medium">Capacity:</span> {product.capacity}</p>
-          <p><span className="font-medium">Type:</span> {product.type}</p>
-          <p><span className="font-medium">Category:</span> {product.category}</p>
+      <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[2.25rem] bg-gradient-to-br from-brand-primary/20 to-brand-primary/0" />
+
+      <div className="relative mb-5">
+        <p className="mb-3 inline-flex rounded-full border border-brand-primary/20 bg-brand-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-primary">
+          Premium Line
+        </p>
+        <h3 className="mb-3 text-xl font-extrabold leading-tight text-slate-900">{product.name}</h3>
+        <div className="grid gap-2 text-sm text-slate-600">
+          <p><span className="font-semibold text-slate-800">Capacity:</span> {product.capacity}</p>
+          <p><span className="font-semibold text-slate-800">Type:</span> {product.type}</p>
+          <p><span className="font-semibold text-slate-800">Category:</span> {product.category}</p>
         </div>
       </div>
 
-      <div className="flex gap-3">
+      <div className="relative flex gap-3">
         <button
           onClick={() => onViewSpecs(product)}
-          className="flex items-center gap-2 px-4 py-2 text-brand-primary border border-brand-primary rounded-lg hover:bg-brand-primary hover:text-white transition-colors text-sm"
+          className="flex items-center gap-2 rounded-xl border border-brand-primary/40 px-4 py-2 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary hover:text-white"
         >
           <Eye className="w-4 h-4" />
           View Specs
         </button>
         <button
           onClick={() => onRequestQuote(product)}
-          className="flex items-center gap-2 px-4 py-2 bg-brand-primary text-white rounded-lg hover:bg-brand-primary/90 transition-colors text-sm"
+          className="flex items-center gap-2 rounded-xl bg-brand-primary px-4 py-2 text-sm font-semibold text-white shadow-md shadow-brand-primary/30 transition-colors hover:bg-brand-primary/90"
         >
           <Mail className="w-4 h-4" />
           Request Quote
@@ -698,7 +703,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Section */}
-      <section id="products-section" className="py-12 bg-white">
+      <section id="products-section" className="py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50">
         <SectionWrapper>
           <motion.div
             key={selectedCategory}
@@ -706,11 +711,14 @@ export default function ProductsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-2 text-center">
               {getCategoryTitle()}
             </h2>
+            <p className="text-center text-slate-500 max-w-2xl mx-auto mb-10">
+              Explore premium-configured systems engineered for reliability, efficiency, and long-term performance.
+            </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
               {getCurrentProducts().map((product, idx) => (
                 <ProductCard
                   key={`${product.name}-${idx}`}
