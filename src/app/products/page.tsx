@@ -7,7 +7,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import { staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import QuoteRequestForm from "@/components/QuoteRequestForm";
-import { Eye, Mail } from "lucide-react";
+import { Eye, Mail, ZoomIn, X, ShieldCheck, Cpu, LayoutGrid, Battery, Zap, RefreshCw, ChevronRight, Leaf, Wifi, Award } from "lucide-react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -243,16 +243,40 @@ const products: {
     },
   ],
   solar: [
-    { name: "High-Efficiency Monocrystalline Solar Module", capacity: "400–550 W", type: "Monocrystalline", category: "Solar Modules" },
-    { name: "Utility-Scale Bifacial Solar Module", capacity: "400–550 W", type: "Bifacial", category: "Solar Modules" },
-    { name: "N-Type High-Power Solar Module", capacity: "550–650 W", type: "N-Type", category: "Solar Modules" },
-    { name: "Anti-Soiling Solar Module", capacity: "400–550 W", type: "Self-Cleaning", category: "Solar Modules" },
-    { name: "Premium Bifacial Solar Module", capacity: "400–550 W", type: "Premium Bifacial", category: "Solar Modules" },
+    {
+      name: "High-Efficiency Monocrystalline Solar Module", capacity: "400–550 W", type: "Monocrystalline", category: "Solar Modules",
+      specs: { energyCapacity: "400–550 W", batteryCell: "Monocrystalline PERC", configuration: "60 / 72 cells", cooling: "Passive (natural convection)", ipRating: "IP68 (junction box)", communication: "N/A", dimensions: "1722 × 1134 × 35 mm", weight: "21.5 kg", maxAltitude: "≤ 5500 m", certifications: "IEC 61215, IEC 61730, UL 1703, MCS, CE" }
+    },
+    {
+      name: "Utility-Scale Bifacial Solar Module", capacity: "400–550 W", type: "Bifacial", category: "Solar Modules",
+      specs: { energyCapacity: "400–550 W", batteryCell: "Bifacial PERC", configuration: "144 half-cut cells", cooling: "Passive (natural convection)", ipRating: "IP68 (junction box)", communication: "N/A", dimensions: "2094 × 1038 × 35 mm", weight: "24.9 kg", maxAltitude: "≤ 5500 m", certifications: "IEC 61215, IEC 61730, UL 1703, CE" }
+    },
+    {
+      name: "N-Type High-Power Solar Module", capacity: "550–650 W", type: "N-Type", category: "Solar Modules",
+      specs: { energyCapacity: "550–650 W", batteryCell: "N-Type TOPCon", configuration: "132 / 144 half-cut cells", cooling: "Passive (natural convection)", ipRating: "IP68 (junction box)", communication: "N/A", dimensions: "2256 × 1133 × 35 mm", weight: "28.0 kg", maxAltitude: "≤ 5500 m", certifications: "IEC 61215, IEC 61730, UL 1703, TÜV, CE" }
+    },
+    {
+      name: "Anti-Soiling Solar Module", capacity: "400–550 W", type: "Self-Cleaning", category: "Solar Modules",
+      specs: { energyCapacity: "400–550 W", batteryCell: "Monocrystalline PERC", configuration: "72 half-cut cells", cooling: "Passive (natural convection)", ipRating: "IP68 (junction box)", communication: "N/A", dimensions: "1960 × 992 × 40 mm", weight: "22.5 kg", maxAltitude: "≤ 5500 m", certifications: "IEC 61215, IEC 61730, CE, ISO 9001" }
+    },
+    {
+      name: "Premium Bifacial Solar Module", capacity: "400–550 W", type: "Premium Bifacial", category: "Solar Modules",
+      specs: { energyCapacity: "400–550 W", batteryCell: "Bifacial N-Type", configuration: "120 half-cut cells", cooling: "Passive (natural convection)", ipRating: "IP68 (junction box)", communication: "N/A", dimensions: "1979 × 1002 × 35 mm", weight: "23.0 kg", maxAltitude: "≤ 5500 m", certifications: "IEC 61215, IEC 61730, UL 1703, MCS, TÜV, CE" }
+    },
   ],
   integrated: [
-    { name: "Solar Shifting System", capacity: "Variable", type: "Integrated", category: "Solar + Storage Systems" },
-    { name: "Backup Power System", capacity: "Variable", type: "Integrated", category: "Solar + Storage Systems" },
-    { name: "Grid Support System", capacity: "Variable", type: "Integrated", category: "Solar + Storage Systems" },
+    {
+      name: "Solar Shifting System", capacity: "Variable", type: "Integrated", category: "Solar + Storage Systems",
+      specs: { energyCapacity: "Customisable (10–500 kWh)", batteryCell: "LFP / NMC", configuration: "Solar PV + BESS + Inverter", cooling: "Forced air / liquid (site-specific)", ipRating: "IP54 (cabinet)", communication: "RS485, Modbus TCP, CAN, 4G/WiFi", dimensions: "Site-specific", weight: "Site-specific", maxAltitude: "≤ 3000 m", certifications: "IEC 62619, UL 9540, CE, ISO 9001" }
+    },
+    {
+      name: "Backup Power System", capacity: "Variable", type: "Integrated", category: "Solar + Storage Systems",
+      specs: { energyCapacity: "Customisable (5–200 kWh)", batteryCell: "LFP", configuration: "Solar PV + BESS + ATS", cooling: "Forced air", ipRating: "IP55 (cabinet)", communication: "RS485, Modbus TCP, 4G/WiFi", dimensions: "Site-specific", weight: "Site-specific", maxAltitude: "≤ 3000 m", certifications: "IEC 62619, UL 9540, CE, IEC 61000" }
+    },
+    {
+      name: "Grid Support System", capacity: "Variable", type: "Integrated", category: "Solar + Storage Systems",
+      specs: { energyCapacity: "Customisable (100 kWh – 10 MWh)", batteryCell: "LFP", configuration: "Solar PV + BESS + Grid-Tie Inverter", cooling: "Liquid cooling (optional)", ipRating: "IP54 (cabinet)", communication: "Modbus TCP, IEC 61850, SCADA, 4G", dimensions: "Site-specific", weight: "Site-specific", maxAltitude: "≤ 3000 m", certifications: "IEC 62619, UL 9540, IEEE 1547, CE" }
+    },
   ],
 };
 
@@ -300,7 +324,7 @@ function SpecsModal({ product, isOpen, onClose }: {
   isOpen: boolean;
   onClose: () => void;
 }) {
-  if (!isOpen || !product || !product.specs) return null;
+  if (!isOpen || !product) return null;
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={onClose}>
@@ -311,19 +335,44 @@ function SpecsModal({ product, isOpen, onClose }: {
         </div>
 
         <div className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-            <div><span className="font-medium">Energy Capacity:</span> {product.specs.energyCapacity}</div>
-            <div><span className="font-medium">Battery Cell:</span> {product.specs.batteryCell}</div>
-            <div><span className="font-medium">Configuration:</span> {product.specs.configuration}</div>
-            <div><span className="font-medium">Cooling:</span> {product.specs.cooling}</div>
-            <div><span className="font-medium">IP Rating:</span> {product.specs.ipRating}</div>
-            <div><span className="font-medium">Communication:</span> {product.specs.communication}</div>
-            <div><span className="font-medium">Dimensions:</span> {product.specs.dimensions}</div>
-            <div><span className="font-medium">Weight:</span> {product.specs.weight}</div>
-            <div><span className="font-medium">Max Altitude:</span> {product.specs.maxAltitude}</div>
-            <div className="md:col-span-2"><span className="font-medium">Certifications:</span> {product.specs.certifications}</div>
-          </div>
+          {product.specs ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div><span className="font-medium">Energy Capacity:</span> {product.specs.energyCapacity}</div>
+              <div><span className="font-medium">Battery Cell:</span> {product.specs.batteryCell}</div>
+              <div><span className="font-medium">Configuration:</span> {product.specs.configuration}</div>
+              <div><span className="font-medium">Cooling:</span> {product.specs.cooling}</div>
+              <div><span className="font-medium">IP Rating:</span> {product.specs.ipRating}</div>
+              <div><span className="font-medium">Communication:</span> {product.specs.communication}</div>
+              <div><span className="font-medium">Dimensions:</span> {product.specs.dimensions}</div>
+              <div><span className="font-medium">Weight:</span> {product.specs.weight}</div>
+              <div><span className="font-medium">Max Altitude:</span> {product.specs.maxAltitude}</div>
+              <div className="md:col-span-2"><span className="font-medium">Certifications:</span> {product.specs.certifications}</div>
+            </div>
+          ) : (
+            <div className="text-sm text-gray-600 space-y-2">
+              <p><span className="font-medium">Capacity:</span> {product.capacity}</p>
+              <p><span className="font-medium">Type:</span> {product.type}</p>
+              <p><span className="font-medium">Category:</span> {product.category}</p>
+              <p className="mt-4 text-gray-500">Full specifications are available on request. Please use the &quot;Request Quote&quot; button to contact our team.</p>
+            </div>
+          )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function ImageLightbox({ src, alt, isOpen, onClose }: {
+  src: string; alt: string; isOpen: boolean; onClose: () => void;
+}) {
+  if (!isOpen) return null;
+  return (
+    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4" onClick={onClose}>
+      <button onClick={onClose} className="absolute top-4 right-4 text-white bg-white/20 hover:bg-white/40 rounded-full p-2 transition-colors" aria-label="Close">
+        <X className="w-6 h-6" />
+      </button>
+      <div className="relative w-full max-w-6xl max-h-[90vh]" onClick={e => e.stopPropagation()}>
+        <img src={src} alt={alt} className="w-full h-auto max-h-[90vh] object-contain rounded-lg" />
       </div>
     </div>
   );
@@ -335,6 +384,7 @@ export default function ProductsPage() {
   const [showSpecsModal, setShowSpecsModal] = useState(false);
   const [showQuoteForm, setShowQuoteForm] = useState(false);
   const [quoteProduct, setQuoteProduct] = useState<Product | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
 
   const handleViewSpecs = (product: Product) => {
     setSelectedProduct(product);
@@ -369,78 +419,247 @@ export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden min-h-[60vh] flex items-center">
-        <div className="absolute inset-0">
-          <Image
-            src="/1218%20Re_GOTION%20EN_260510_195022%20Image%5B17%5D.jpg"
-            alt="Battery storage products"
-            fill
-            className="object-cover"
-            priority
-            unoptimized
-          />
-        </div>
+      <section className="pt-24 overflow-hidden relative">
+        {/* Mobile background — scales to viewport width */}
+        <div
+          className="absolute inset-0 sm:hidden bg-no-repeat bg-top"
+          style={{ backgroundImage: "url('/product%20hero.png')", backgroundSize: "100% auto" }}
+        />
+        {/* Desktop background — natural pixel size */}
+        <div
+          className="absolute inset-0 hidden sm:block bg-no-repeat bg-top"
+          style={{ backgroundImage: "url('/product%20hero.png')", backgroundSize: "auto" }}
+        />
+        {/* Main hero: text + featured card */}
         <SectionWrapper className="relative z-10">
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="max-w-xl ml-auto"
+            className="pt-6 max-w-3xl"
           >
-            <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-xl">
-              <motion.p variants={fadeUp} className="uppercase tracking-[0.22em] text-sm font-semibold text-brand-primary mb-3">
-                Products
-              </motion.p>
-              <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-bold mb-4 text-brand-secondary leading-tight">
-                Storage and Solar Products
-              </motion.h1>
-              <motion.p variants={fadeUp} className="text-lg text-gray-600 leading-relaxed">
-                Battery storage and solar technologies for commercial, industrial, and utility-scale energy projects.
-              </motion.p>
-            </div>
+            {/* Label */}
+            <motion.p variants={fadeUp} className="text-brand-accent uppercase tracking-[0.2em] text-xs font-bold mb-4">
+              Powering a Sustainable Future
+            </motion.p>
+
+            {/* Heading */}
+            <motion.h1 variants={fadeUp} className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-brand-secondary leading-[1.05] mb-4">
+              Energy Storage<br />Solutions
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p variants={fadeUp} className="text-gray-700 text-base sm:text-lg mb-6 max-w-md">
+              Advanced battery systems for every need. Scalable. Intelligent. Built for tomorrow.
+            </motion.p>
+
+            {/* Feature badges */}
+            <motion.div variants={fadeUp} className="border-y border-gray-300 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-300">
+                {[
+                  { icon: <ShieldCheck className="w-4 h-4 text-brand-accent" />, label: "Safe & Reliable", sub: "LiFePO₄ Technology" },
+                  { icon: <Cpu className="w-4 h-4 text-brand-accent" />, label: "Smart BMS", sub: "Intelligent Control" },
+                  { icon: <LayoutGrid className="w-4 h-4 text-brand-accent" />, label: "Scalable Design", sub: "From Home to Grid" },
+                ].map((b) => (
+                  <div key={b.label} className="flex items-center gap-3 py-3 sm:py-4 sm:px-5 first:sm:pl-0 last:sm:pr-0">
+                    {b.icon}
+                    <div>
+                      <p className="font-bold text-sm text-brand-secondary">{b.label}</p>
+                      <p className="text-xs text-gray-500">{b.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Featured GRID card */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-white/30 backdrop-blur-sm border border-white/40 rounded-2xl p-4 sm:p-6 shadow-sm"
+            >
+              {/* Mobile: stacked, Desktop: horizontal */}
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+                {/* Title */}
+                <div className="shrink-0">
+                  <p className="text-brand-accent text-[10px] font-extrabold uppercase tracking-[0.2em] mb-1">Featured</p>
+                  <h2 className="text-3xl sm:text-4xl font-black text-brand-secondary leading-none">GRID</h2>
+                  <p className="text-xs text-gray-500 mt-1 font-medium">Utility-Scale Energy Storage System</p>
+                </div>
+
+                <div className="hidden sm:block w-px self-stretch bg-gray-300/60" />
+
+                {/* Specs — 3-col grid on mobile */}
+                <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-x-6 gap-y-3 flex-1">
+                  {[
+                    { icon: <Battery className="w-4 h-4" />, value: "5 MWh",         label: "Energy Capacity" },
+                    { icon: <Zap className="w-4 h-4" />,     value: "2.5 MW",        label: "Output Power" },
+                    { icon: <RefreshCw className="w-4 h-4" />, value: "6000+ Cycles", label: "LFP Battery" },
+                  ].map((spec) => (
+                    <div key={spec.label} className="flex items-start sm:items-center gap-2">
+                      <span className="text-brand-primary mt-0.5 sm:mt-0">{spec.icon}</span>
+                      <div>
+                        <p className="font-bold text-xs sm:text-sm text-brand-secondary leading-tight">{spec.value}</p>
+                        <p className="text-[9px] sm:text-[10px] text-gray-500">{spec.label}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="hidden sm:block w-px self-stretch bg-gray-300/60" />
+
+                {/* CTAs */}
+                <div className="flex flex-row sm:flex-col gap-3 sm:gap-2 shrink-0">
+                  <Button href="/contact" variant="primary" className="text-sm flex-1 sm:flex-none text-center justify-center">
+                    Request Quote
+                  </Button>
+                  <button
+                    onClick={() => {
+                      setSelectedCategory("utility_bess");
+                      document.getElementById("products-section")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="text-xs font-semibold text-brand-secondary flex items-center justify-center gap-1 hover:text-brand-primary transition-colors flex-1 sm:flex-none"
+                  >
+                    View Full Specs <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </SectionWrapper>
+
+        {/* Product cards row */}
+        <div className="relative z-10 mt-8 px-4 sm:px-6 lg:px-10 pb-8">
+          <div className="max-w-[1440px] mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+            {[
+              { img: "/Gigacore%20Home%203000.png",   label: "Residential", name: "Home 3000",    desc: "Home mobile energy storage product." },
+              { img: "/EPLVS%20intelligent.png",      label: "Portable",    name: "EPLVS",        desc: "Intelligent mobile charging pile." },
+              { img: "/Gigacore%20EDGE.png",          label: "Commercial",  name: "EDGE",         desc: "C&I energy storage cabinet." },
+              { img: "/Gigacore%20G0300.png",         label: "Utility",     name: "Go300",        desc: "Large energy storage battery cell." },
+              { img: "/storage%20battery%20cell.png", label: "Modular",     name: "Battery Cell", desc: "High-cycle LFP cell technology." },
+            ].map((card) => (
+              <motion.div
+                key={card.name}
+                whileHover={{ y: -8, scale: 1.02 }}
+                whileTap={{ scale: 0.96, y: 0 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="group relative bg-white/70 backdrop-blur-md rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-[0_12px_40px_rgba(74,125,180,0.25)] transition-shadow duration-300"
+                style={{ transformOrigin: "bottom center" }}
+              >
+                {/* Top accent line */}
+                <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-brand-primary to-brand-primary/40 transition-all duration-500" />
+
+                {/* Image area */}
+                <div className="bg-gradient-to-b from-gray-50/80 to-white/60 flex items-center justify-center px-4 pt-5 pb-3 h-28 sm:h-36">
+                  <img
+                    src={card.img}
+                    alt={card.name}
+                    className="h-full w-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500 ease-out"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="px-4 pb-4 pt-2">
+                  <p className="text-[9px] font-extrabold uppercase tracking-[0.18em] text-brand-primary/70 mb-1">{card.label}</p>
+                  <h4 className="font-bold text-brand-secondary text-sm leading-tight group-hover:text-brand-primary transition-colors duration-200">{card.name}</h4>
+                  <p className="text-[10px] text-gray-400 mt-1 leading-relaxed hidden sm:block">{card.desc}</p>
+                </div>
+
+                {/* Bottom arrow bar */}
+                <div className="flex items-center justify-between px-4 pb-3 pt-0">
+                  <div className="h-px flex-1 bg-gray-100 group-hover:bg-brand-primary/20 transition-colors duration-300" />
+                  <span className="ml-3 flex items-center justify-center w-6 h-6 rounded-full border border-gray-200 group-hover:border-brand-primary group-hover:bg-brand-primary transition-all duration-300">
+                    <ChevronRight className="w-3 h-3 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
       </section>
 
-      {/* Product Overview Images */}
-      <section className="py-12 bg-white">
+      {/* Feature Strip */}
+      <section className="bg-white border-y border-gray-100">
         <SectionWrapper>
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-100"
           >
-            <motion.div variants={fadeUp}>
-              <p className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3">Energy Storage</p>
-              <h3 className="text-2xl font-bold text-brand-secondary mb-6">BESS Product Range</h3>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-video">
-                <Image
-                  src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_11_02%20PM.png"
-                  alt="Energy Storage Products"
-                  fill
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-            </motion.div>
-            <motion.div variants={fadeUp}>
-              <p className="text-brand-primary font-bold uppercase tracking-widest text-sm mb-3">Battery Technology</p>
-              <h3 className="text-2xl font-bold text-brand-secondary mb-6">Cell Technology</h3>
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-video">
-                <Image
-                  src="/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_19_28%20PM.png"
-                  alt="Battery Cell Technology"
-                  fill
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-            </motion.div>
+            {[
+              { icon: <Leaf className="w-6 h-6" />,        title: "Sustainable Energy",  desc: "Clean power for a better tomorrow.",        color: "from-emerald-50 to-white" },
+              { icon: <Wifi className="w-6 h-6" />,        title: "Smart Connectivity",  desc: "Monitor and control from anywhere.",         color: "from-sky-50 to-white" },
+              { icon: <ShieldCheck className="w-6 h-6" />, title: "Unmatched Safety",    desc: "Multi-layer protection you can trust.",      color: "from-blue-50 to-white" },
+              { icon: <Award className="w-6 h-6" />,       title: "Built to Last",       desc: "Premium components. Proven performance.",    color: "from-indigo-50 to-white" },
+            ].map((f) => (
+              <motion.div
+                key={f.title}
+                variants={fadeUp}
+                className={`group flex items-start gap-5 bg-gradient-to-br ${f.color} hover:from-brand-light hover:to-white transition-all duration-300 px-8 py-8 cursor-default`}
+              >
+                <span className="shrink-0 flex items-center justify-center w-12 h-12 rounded-2xl bg-brand-primary/10 text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                  {f.icon}
+                </span>
+                <div className="pt-0.5">
+                  <p className="font-bold text-brand-secondary text-base mb-1">{f.title}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </SectionWrapper>
+      </section>
+
+      {/* Product Overview Images */}
+      <section className="py-16 bg-[#F8FAFB]">
+        {/* Heading — constrained */}
+        <SectionWrapper>
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            <motion.p variants={fadeUp} className="text-brand-primary font-extrabold uppercase tracking-[0.18em] text-[11px] mb-2 text-center">Our Technology</motion.p>
+            <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-bold text-brand-secondary text-center mb-10">Product Range Overview</motion.h2>
+          </motion.div>
+        </SectionWrapper>
+
+        {/* Cards — full width */}
+        <motion.div
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="px-4 sm:px-6 lg:px-8"
+        >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {[
+                { label: "Energy Storage", title: "BESS Product Range", src: "/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_11_02%20PM.png", alt: "Energy Storage Products" },
+                { label: "Battery Technology", title: "Cell Technology",  src: "/ChatGPT%20Image%20May%2011%2C%202026%2C%2012_19_28%20PM.png", alt: "Battery Cell Technology" },
+              ].map((item) => (
+                <motion.div key={item.title} variants={fadeUp} className="group flex flex-col">
+                  {/* Text outside the card */}
+                  <div className="mb-4 px-1">
+                    <p className="text-brand-primary font-extrabold uppercase tracking-[0.18em] text-[10px] mb-1.5">{item.label}</p>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-brand-secondary">{item.title}</h3>
+                  </div>
+
+                  {/* Card — image only, full bleed */}
+                  <div className="relative rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.07)] hover:shadow-[0_16px_48px_rgba(74,125,180,0.18)] transition-shadow duration-500 border border-gray-100">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-auto object-contain block group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
       </section>
 
       {/* Category Overview */}
@@ -480,7 +699,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-12 bg-white">
+      <section id="products-section" className="py-12 bg-white">
         <SectionWrapper>
           <motion.div
             key={selectedCategory}
@@ -528,7 +747,7 @@ export default function ProductsPage() {
               <Button href="/contact" variant="outline">
                 Contact Our Team
               </Button>
-              <Button href="/technology" variant="secondary">
+              <Button href="/technology" variant="primary">
                 Learn About Technology
               </Button>
             </motion.div>
@@ -550,6 +769,13 @@ export default function ProductsPage() {
           onClose={() => setShowQuoteForm(false)}
         />
       )}
+
+      <ImageLightbox
+        src={lightboxImage?.src ?? ""}
+        alt={lightboxImage?.alt ?? ""}
+        isOpen={!!lightboxImage}
+        onClose={() => setLightboxImage(null)}
+      />
     </main>
   );
 }

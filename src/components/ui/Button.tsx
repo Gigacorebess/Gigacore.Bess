@@ -56,16 +56,9 @@ const Button: React.FC<ButtonProps> = ({
 
     if (href) {
         return (
-            <Link href={href} legacyBehavior passHref>
-                <motion.a
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={classes}
-                    {...(props as HTMLMotionProps<"a">)}
-                >
-                    <SlideBackground />
-                    <span className="relative z-10 flex items-center gap-2">{children}</span>
-                </motion.a>
+            <Link href={href} className={classes}>
+                <SlideBackground />
+                <span className="relative z-10 flex items-center gap-2">{children}</span>
             </Link>
         );
     }
